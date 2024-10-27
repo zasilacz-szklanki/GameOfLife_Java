@@ -43,7 +43,7 @@ class PlainGameOfLifeSimulatorTest {
         GameOfLifeBoard golb = new GameOfLifeBoard(boardBegin);
         GameOfLifeSimulator simulatorGolb = new PlainGameOfLifeSimulator();
         golb.doSimulationStep(simulatorGolb);
-        assert (!boardBegin[2][2]);
+        assert(!golb.getBoard()[2][2]);
     }
 
     @Test

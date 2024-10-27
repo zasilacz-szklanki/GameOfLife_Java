@@ -9,14 +9,22 @@ public class GameOfLifeBoard {
         //return this.board;//unsafe
         boolean[][] boardCopy = new boolean[board.length][board[0].length];
         for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[0].length; j++) {
+            for (int j = 0; j < board[i].length; j++) {
                 boardCopy[i][j] = board[i][j];
             }
         }
         return boardCopy;
     }
 
-    public GameOfLifeBoard(boolean[][] board) { this.board = board; }
+    public GameOfLifeBoard(boolean[][] board) {
+        //this.board = board;
+        this.board = new boolean[board.length][board[0].length];
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                this.board[i][j] = board[i][j];
+            }
+        }
+    }
 
     public GameOfLifeBoard(int n, int m) {
         Random rand = new Random();
