@@ -2,10 +2,6 @@ package org.example;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 class PlainGameOfLifeSimulatorTest {
     @Test
     void test1() {
@@ -17,17 +13,14 @@ class PlainGameOfLifeSimulatorTest {
                 {false, false, false, false, false},
                 {false, false, false, false, false}
         };
-        boolean[][] boardEnd = {
-                {false, false, false, false, false},
-                {false, false, false, false, false},
-                {false, false, false, false, false},
-                {false, false, false, false, false},
-                {false, false, false, false, false}
-        };
         GameOfLifeBoard golb = new GameOfLifeBoard(boardBegin);
         GameOfLifeSimulator simulatorGolb = new PlainGameOfLifeSimulator();
         golb.doSimulationStep(simulatorGolb);
-        assert (Arrays.deepEquals(golb.getBoard(), boardEnd));
+        for (int i = 0; i < boardBegin.length; i++) {
+            for (int j = 0; j < boardBegin[i].length; j++) {
+                assert (golb.getBoard()[i][j].getCellValue() == boardBegin[i][j]);
+            }
+        }
     }
 
     @Test
@@ -43,7 +36,7 @@ class PlainGameOfLifeSimulatorTest {
         GameOfLifeBoard golb = new GameOfLifeBoard(boardBegin);
         GameOfLifeSimulator simulatorGolb = new PlainGameOfLifeSimulator();
         golb.doSimulationStep(simulatorGolb);
-        assert(!golb.getBoard()[2][2]);
+        assert(!golb.getBoard()[2][2].getCellValue());
     }
 
     @Test
@@ -59,7 +52,7 @@ class PlainGameOfLifeSimulatorTest {
         GameOfLifeBoard golb = new GameOfLifeBoard(boardBegin);
         GameOfLifeSimulator simulatorGolb = new PlainGameOfLifeSimulator();
         golb.doSimulationStep(simulatorGolb);
-        assert (golb.getBoard()[2][2]);
+        assert (golb.getBoard()[2][2].getCellValue());
     }
 
     @Test
@@ -76,8 +69,8 @@ class PlainGameOfLifeSimulatorTest {
         GameOfLifeBoard golb = new GameOfLifeBoard(boardBegin);
         GameOfLifeSimulator simulatorGolb = new PlainGameOfLifeSimulator();
         golb.doSimulationStep(simulatorGolb);
-        assert (golb.getBoard()[2][1]);
-        assert (golb.getBoard()[3][3]);
+        assert (golb.getBoard()[2][1].getCellValue());
+        assert (golb.getBoard()[3][3].getCellValue());
     }
 
     @Test
@@ -94,8 +87,8 @@ class PlainGameOfLifeSimulatorTest {
         GameOfLifeBoard golb = new GameOfLifeBoard(boardBegin);
         GameOfLifeSimulator simulatorGolb = new PlainGameOfLifeSimulator();
         golb.doSimulationStep(simulatorGolb);
-        assert (!golb.getBoard()[1][1]);
-        assert (!golb.getBoard()[3][3]);
+        assert (!golb.getBoard()[1][1].getCellValue());
+        assert (!golb.getBoard()[3][3].getCellValue());
     }
 
     @Test
@@ -112,8 +105,8 @@ class PlainGameOfLifeSimulatorTest {
         GameOfLifeBoard golb = new GameOfLifeBoard(boardBegin);
         GameOfLifeSimulator simulatorGolb = new PlainGameOfLifeSimulator();
         golb.doSimulationStep(simulatorGolb);
-        assert (!golb.getBoard()[1][1]);
-        assert (!golb.getBoard()[3][3]);
+        assert (!golb.getBoard()[1][1].getCellValue());
+        assert (!golb.getBoard()[3][3].getCellValue());
     }
 
     @Test
@@ -130,7 +123,7 @@ class PlainGameOfLifeSimulatorTest {
         GameOfLifeBoard golb = new GameOfLifeBoard(boardBegin);
         GameOfLifeSimulator simulatorGolb = new PlainGameOfLifeSimulator();
         golb.doSimulationStep(simulatorGolb);
-        assert (!golb.getBoard()[1][1]);
-        assert (!golb.getBoard()[0][1]);
+        assert (!golb.getBoard()[1][1].getCellValue());
+        assert (!golb.getBoard()[0][1].getCellValue());
     }
 }

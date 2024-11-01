@@ -24,7 +24,11 @@ class GameOfLifeBoardTest {
         };
 
         GameOfLifeBoard board = new GameOfLifeBoard(boardBegin);
-        assert (Arrays.deepEquals(board.getBoard(), boardBegin));
+        for (int i = 0; i < boardBegin.length; i++) {
+            for (int j = 0; j < boardBegin[i].length; j++) {
+                assert (board.getBoard()[i][j].getCellValue() == boardBegin[i][j]);
+            }
+        }
     }
 
     @Test
@@ -40,7 +44,7 @@ class GameOfLifeBoardTest {
 
         GameOfLifeBoard board = new GameOfLifeBoard(boardBegin);
         board.set(2,2, true);
-        assert (board.get(2,2));
-        assert (!board.get(0,0));
+        assert (board.get(2,2).getCellValue());
+        assert (!board.get(0,0).getCellValue());
     }
 }
