@@ -42,15 +42,22 @@ public class GameOfLifeBoard {
 
     }
 
-    public GameOfLifeCell get(int x, int y) {
-        return board[x][y];
+    public boolean get(int x, int y) {
+        return board[x][y].getCellValue();
     }
 
     public void set(int x, int y, boolean value) {
         board[x][y].updateState(value);
     }
 
-    // jako parametr przekazujemy obiekt symulatora
+    public GameOfLifeColumn getColumn(int index) {
+        return new GameOfLifeColumn(board, index);
+    }
+
+    public GameOfLifeRow getRow(int index) {
+        return new GameOfLifeRow(board, index);
+    }
+
     public void doSimulationStep(GameOfLifeSimulator simulation) {
         simulation.doStep(this);
     }

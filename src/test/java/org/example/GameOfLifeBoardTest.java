@@ -44,7 +44,45 @@ class GameOfLifeBoardTest {
 
         GameOfLifeBoard board = new GameOfLifeBoard(boardBegin);
         board.set(2,2, true);
-        assert (board.get(2,2).getCellValue());
-        assert (!board.get(0,0).getCellValue());
+        assert (board.get(2,2));
+        assert (!board.get(0,0));
+    }
+
+    @Test
+    void test4() {
+        // test dla getColumn
+        boolean[][] testBoard = {
+                {false, false, false, false, false},
+                {false, true, true, false, false},
+                {false, true, false, false, false},
+                {false, false, false, true, true},
+                {false, false, false, true, true}
+        };
+
+        GameOfLifeBoard board = new GameOfLifeBoard(testBoard);
+        GameOfLifeColumn col = board.getColumn(1);
+
+        for (int i = 0; i < board.getBoard().length; i++) {
+            assert (board.getBoard()[i][1].getCellValue() == col.getSegment()[i].getCellValue());
+        }
+    }
+
+    @Test
+    void test5() {
+        // test dla getRow
+        boolean[][] testBoard = {
+                {false, false, false, false, false},
+                {false, true, true, false, false},
+                {false, true, false, false, false},
+                {false, false, false, true, true},
+                {false, false, false, true, true}
+        };
+
+        GameOfLifeBoard board = new GameOfLifeBoard(testBoard);
+        GameOfLifeRow row = board.getRow(1);
+
+        for (int i = 0; i < board.getBoard()[0].length; i++) {
+            assert (board.getBoard()[1][i].getCellValue() == row.getSegment()[i].getCellValue());
+        }
     }
 }

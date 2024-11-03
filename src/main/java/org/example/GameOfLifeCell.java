@@ -4,27 +4,27 @@ public class GameOfLifeCell {
     private boolean value;
     private GameOfLifeCell[] neighbours;
 
-    private int countNeighbour(){
+    private int countNeighbour() {
         int count = 0;
-        for(GameOfLifeCell neighbour : neighbours){
-            if(neighbour.value){
+        for (GameOfLifeCell neighbour : neighbours) {
+            if (neighbour.value) {
                 count++;
             }
         }
         return count;
     }
 
-    public GameOfLifeCell(boolean value){
+    public GameOfLifeCell(boolean value) {
         this.value = value;
         this.neighbours = new GameOfLifeCell[8];
     }
 
-    public GameOfLifeCell(GameOfLifeCell cell){
+    public GameOfLifeCell(GameOfLifeCell cell) {
         this.value = cell.value;
         this.neighbours = new GameOfLifeCell[8];
     }
 
-    public void initNeighbours(GameOfLifeCell[][] board,int i,int j){
+    public void initNeighbours(GameOfLifeCell[][] board,int i,int j) {
         final int n = board.length;
         final int m = board[0].length;
         board[i][j].neighbours[0] = board[(i + 1 + n) % n][(j + 1 + m) % m];
@@ -39,18 +39,18 @@ public class GameOfLifeCell {
         board[i][j].neighbours[7] = board[(i - 1 + n) % n][j % m];
     }
 
-    public void setNeighbours(GameOfLifeCell cell){
+    public void setNeighbours(GameOfLifeCell cell) {
         this.neighbours = new GameOfLifeCell[8];
         for (int i = 0; i < cell.neighbours.length; i++) {
             this.neighbours[i] = new GameOfLifeCell(cell.neighbours[i]);
         }
     }
 
-    public boolean getCellValue(){
+    public boolean getCellValue() {
         return this.value;
     }
 
-    public boolean nextState(){
+    public boolean nextState() {
         int neighbour = countNeighbour();
         if (this.value && (neighbour == 2 || neighbour == 3)) {
             return true;
@@ -60,7 +60,7 @@ public class GameOfLifeCell {
         return false;
     }
 
-    public void updateState(boolean state){
+    public void updateState(boolean state) {
         this.value = state;
     }
 }
