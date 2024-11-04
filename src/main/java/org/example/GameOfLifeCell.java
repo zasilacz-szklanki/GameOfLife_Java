@@ -1,8 +1,34 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GameOfLifeCell {
     private boolean value;
     private GameOfLifeCell[] neighbours;
+    private List<CellObserver> observers;
+
+    public GameOfLifeCell(boolean value) {
+        this.value = value;
+        this.neighbours = new GameOfLifeCell[8];
+        this.observers = new ArrayList<>();
+    }
+
+    public GameOfLifeCell(GameOfLifeCell cell) {
+        this.value = cell.value;
+        this.neighbours = new GameOfLifeCell[8];
+        this.observers = new ArrayList<>();
+    }
+
+    public void addObserver(CellObserver observer) {
+        observers.add(observer);
+    }
+
+    public void alarmObservers() {
+        for (CellObserver observer : observers) {
+            observer.whenCellChanged(this);
+        }
+    }
 
     private int countNeighbour() {
         int count = 0;
@@ -12,16 +38,6 @@ public class GameOfLifeCell {
             }
         }
         return count;
-    }
-
-    public GameOfLifeCell(boolean value) {
-        this.value = value;
-        this.neighbours = new GameOfLifeCell[8];
-    }
-
-    public GameOfLifeCell(GameOfLifeCell cell) {
-        this.value = cell.value;
-        this.neighbours = new GameOfLifeCell[8];
     }
 
     public void initNeighbours(GameOfLifeCell[][] board,int i,int j) {
@@ -61,6 +77,9 @@ public class GameOfLifeCell {
     }
 
     public void updateState(boolean state) {
-        this.value = state;
+        if (this.value != state) {
+            this.value = state;
+            alarmObservers();
+        }
     }
 }

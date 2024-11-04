@@ -22,4 +22,28 @@ class GameOfLifeSegmentTest {
         assert (row.countAliveCells() == 2);
         assert (row.countDeadCells() == 3);
     }
+
+    @Test
+    void test2() {
+        boolean[][] testBoard = {
+                {false, false, false, false, false},
+                {false, false, false, false, false},
+                {false, false, true, false, false},
+                {false, false, false, false, false},
+                {false, false, false, false, false},
+        };
+
+        GameOfLifeBoard board = new GameOfLifeBoard(testBoard);
+        GameOfLifeSimulator simulator = new PlainGameOfLifeSimulator();
+        GameOfLifeColumn col = board.getColumn(2);
+        GameOfLifeRow row = board.getRow(2);
+
+        assert (col.getSegment()[2].getCellValue() == board.get(2, 2));
+        assert (row.getSegment()[2].getCellValue() == board.get(2, 2));
+
+        board.doSimulationStep(simulator);
+
+        assert (col.getSegment()[2].getCellValue() == board.get(2, 2));
+        assert (row.getSegment()[2].getCellValue() == board.get(2, 2));
+    }
 }

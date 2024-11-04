@@ -5,6 +5,7 @@ public class PlainGameOfLifeSimulator implements GameOfLifeSimulator {
     public void doStep(GameOfLifeBoard board) {
         GameOfLifeCell[][] current = board.getBoard();
         GameOfLifeCell[][] next = new GameOfLifeCell[current.length][current[0].length];
+
         for (int i = 0; i < next.length; i++) {
             for (int j = 0; j < next[0].length; j++) {
                 next[i][j] = new GameOfLifeCell(current[i][j]);
