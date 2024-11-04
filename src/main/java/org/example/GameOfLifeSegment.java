@@ -1,6 +1,6 @@
 package org.example;
 
-public abstract class GameOfLifeSegment implements CellObserver {
+public abstract class GameOfLifeSegment implements Observer<GameOfLifeCell> {
     protected final GameOfLifeCell[] segment;
     protected GameOfLifeCell[][] board;
     protected int segmentIndex;
@@ -26,7 +26,7 @@ public abstract class GameOfLifeSegment implements CellObserver {
     }
 
     @Override
-    public void whenCellChanged(GameOfLifeCell cell) {
+    public void whenChanged(GameOfLifeCell cell) {
         updateSegmentState();
     }
 

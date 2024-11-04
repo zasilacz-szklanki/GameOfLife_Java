@@ -6,28 +6,26 @@ import java.util.List;
 public class GameOfLifeCell {
     private boolean value;
     private GameOfLifeCell[] neighbours;
-    private List<CellObserver> observers;
+    private ObservatorsManagement<GameOfLifeCell> observers;
 
     public GameOfLifeCell(boolean value) {
         this.value = value;
         this.neighbours = new GameOfLifeCell[8];
-        this.observers = new ArrayList<>();
+        this.observers = new ObservatorsManagement<>();
     }
 
     public GameOfLifeCell(GameOfLifeCell cell) {
         this.value = cell.value;
         this.neighbours = new GameOfLifeCell[8];
-        this.observers = new ArrayList<>();
+        this.observers = new ObservatorsManagement<>();
     }
 
-    public void addObserver(CellObserver observer) {
-        observers.add(observer);
+    public void addObserver(Observer<GameOfLifeCell> observer) {
+        observers.addObserver(observer);
     }
 
     public void alarmObservers() {
-        for (CellObserver observer : observers) {
-            observer.whenCellChanged(this);
-        }
+        observers.alarmObservers(this);
     }
 
     private int countNeighbour() {
