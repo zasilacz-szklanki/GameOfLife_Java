@@ -38,12 +38,12 @@ class GameOfLifeSegmentTest {
         GameOfLifeColumn col = board.getColumn(2);
         GameOfLifeRow row = board.getRow(2);
 
-        assert (col.getSegment()[2].getCellValue() == board.get(2, 2));
-        assert (row.getSegment()[2].getCellValue() == board.get(2, 2));
+        assert (col.getSegment().get(2).getCellValue() == board.get(2, 2));
+        assert (row.getSegment().get(2).getCellValue() == board.get(2, 2));
 
         board.doSimulationStep(simulator);
 
-        assert (col.getSegment()[2].getCellValue() == board.get(2, 2));
-        assert (row.getSegment()[2].getCellValue() == board.get(2, 2));
+        assert (col.getSegment().get(2).getCellValue() == board.get(2, 2));
+        assert (row.getSegment().get(2).getCellValue() == board.get(2, 2));
     }
 }

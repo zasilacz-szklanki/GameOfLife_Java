@@ -1,26 +1,29 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class GameOfLifeSegment implements Observer<GameOfLifeCell> {
-    protected final GameOfLifeCell[] segment;
-    protected GameOfLifeCell[][] board;
+    protected final List<GameOfLifeCell> segment;
+    protected List<List<GameOfLifeCell>> board;
     protected int segmentIndex;
     protected boolean type;
 
-    protected GameOfLifeSegment(GameOfLifeCell[][] board, int index, boolean isRow) {
+    protected GameOfLifeSegment(List<List<GameOfLifeCell>> board, int index, boolean isRow) {
         this.board = board;
         this.segmentIndex = index;
         this.type = isRow;
-        segment = new GameOfLifeCell[isRow ? board[0].length : board.length];
+        this.segment = new ArrayList<>(isRow ? board.get(0).size() : board.size());
 
         if (type) {
-            for (int i = 0; i < board[0].length; i++) {
-                segment[i] = board[segmentIndex][i];
-                board[segmentIndex][i].addObserver(this);
+            for (int i = 0; i < board.get(0).size(); i++) {
+                segment.add(board.get(segmentIndex).get(i));
+                board.get(segmentIndex).get(i).addObserver(this);
             }
         } else {
-            for (int i = 0; i < board.length; i++) {
-                segment[i] = board[i][segmentIndex];
-                board[i][segmentIndex].addObserver(this);
+            for (int i = 0; i < board.size(); i++) {
+                segment.add(board.get(i).get(segmentIndex));
+                board.get(i).get(segmentIndex).addObserver(this);
             }
         }
     }
@@ -31,19 +34,19 @@ public abstract class GameOfLifeSegment implements Observer<GameOfLifeCell> {
     }
 
     protected void updateSegmentState() {
-        for (int i = 0; i < segment.length; i++) {
+        for (int i = 0; i < segment.size(); i++) {
             if (type) {
-                segment[i].updateState(board[segmentIndex][i].getCellValue());
+                segment.get(i).updateState(board.get(segmentIndex).get(i).getCellValue());
             } else {
-                segment[i].updateState(board[i][segmentIndex].getCellValue());
+                segment.get(i).updateState(board.get(i).get(segmentIndex).getCellValue());
             }
         }
     }
 
-    public GameOfLifeCell[] getSegment() {
-        GameOfLifeCell[] segmentCopy = new GameOfLifeCell[segment.length];
-        for (int i = 0; i < segment.length; i++) {
-            segmentCopy[i] = new GameOfLifeCell(segment[i]);
+    public List<GameOfLifeCell> getSegment() {
+        List<GameOfLifeCell> segmentCopy = new ArrayList<>(segment.size());
+        for (GameOfLifeCell cell : segment) {
+            segmentCopy.add(new GameOfLifeCell(cell));
         }
         return segmentCopy;
     }

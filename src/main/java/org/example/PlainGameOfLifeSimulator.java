@@ -1,20 +1,31 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PlainGameOfLifeSimulator implements GameOfLifeSimulator {
     @Override
     public void doStep(GameOfLifeBoard board) {
-        GameOfLifeCell[][] current = board.getBoard();
-        GameOfLifeCell[][] next = new GameOfLifeCell[current.length][current[0].length];
+        List<List<GameOfLifeCell>> current = board.getBoard();
+        List<List<GameOfLifeCell>> next = new ArrayList<>();
 
-        for (int i = 0; i < next.length; i++) {
-            for (int j = 0; j < next[0].length; j++) {
-                next[i][j] = new GameOfLifeCell(current[i][j]);
-                next[i][j].setNeighbours(current[i][j]);
+        for (int i = 0; i < current.size(); i++) {
+            List<GameOfLifeCell> newRow = new ArrayList<>();
+            for (int j = 0; j < current.get(i).size(); j++) {
+                newRow.add(new GameOfLifeCell(current.get(i).get(j)));
+            }
+            next.add(newRow);
+        }
+
+        for (int i = 0; i < next.size(); i++) {
+            for (int j = 0; j < next.get(i).size(); j++) {
+                next.get(i).get(j).setNeighbours(current.get(i).get(j));
             }
         }
-        for (int i = 0; i < current.length; i++) {
-            for (int j = 0; j < current[i].length; j++) {
-                current[i][j].updateState(next[i][j].nextState());
+
+        for (int i = 0; i < current.size(); i++) {
+            for (int j = 0; j < current.get(i).size(); j++) {
+                current.get(i).get(j).updateState(next.get(i).get(j).nextState());
             }
         }
     }

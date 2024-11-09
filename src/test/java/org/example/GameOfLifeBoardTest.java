@@ -10,7 +10,7 @@ class GameOfLifeBoardTest {
         // 2 kolejne wywołania konstruktora generują inny początkowy układ
         GameOfLifeBoard board1 = new GameOfLifeBoard(8, 8);
         GameOfLifeBoard board2 = new GameOfLifeBoard(8, 8);
-        assert (!Arrays.deepEquals(board1.getBoard(), board2.getBoard()));
+        assert (!board1.getBoard().equals(board2.getBoard()));
     }
 
     @Test
@@ -26,7 +26,7 @@ class GameOfLifeBoardTest {
         GameOfLifeBoard board = new GameOfLifeBoard(boardBegin);
         for (int i = 0; i < boardBegin.length; i++) {
             for (int j = 0; j < boardBegin[i].length; j++) {
-                assert (board.getBoard()[i][j].getCellValue() == boardBegin[i][j]);
+                assert (board.getBoard().get(i).get(j).getCellValue() == boardBegin[i][j]);
             }
         }
     }
@@ -62,8 +62,8 @@ class GameOfLifeBoardTest {
         GameOfLifeBoard board = new GameOfLifeBoard(testBoard);
         GameOfLifeColumn col = board.getColumn(1);
 
-        for (int i = 0; i < board.getBoard().length; i++) {
-            assert (board.getBoard()[i][1].getCellValue() == col.getSegment()[i].getCellValue());
+        for (int i = 0; i < board.getBoard().size(); i++) {
+            assert (board.getBoard().get(i).get(1).getCellValue() == col.getSegment().get(i).getCellValue());
         }
     }
 
@@ -81,8 +81,8 @@ class GameOfLifeBoardTest {
         GameOfLifeBoard board = new GameOfLifeBoard(testBoard);
         GameOfLifeRow row = board.getRow(1);
 
-        for (int i = 0; i < board.getBoard()[0].length; i++) {
-            assert (board.getBoard()[1][i].getCellValue() == row.getSegment()[i].getCellValue());
+        for (int i = 0; i < board.getBoard().get(0).size(); i++) {
+            assert (board.getBoard().get(1).get(i).getCellValue() == row.getSegment().get(i).getCellValue());
         }
     }
 }

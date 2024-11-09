@@ -1,7 +1,9 @@
 package org.example;
 
+import java.util.List;
+
 public class GameOfLifeRow extends GameOfLifeSegment {
-    public GameOfLifeRow(GameOfLifeCell[][] board, int index) {
+    public GameOfLifeRow(List<List<GameOfLifeCell>> board, int index) {
         super(board, index, true);
     }
 }

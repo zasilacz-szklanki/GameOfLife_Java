@@ -1,53 +1,69 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class GameOfLifeBoard {
-    private final GameOfLifeCell[][] board;
+    private final List<List<GameOfLifeCell>> board;
 
-    public GameOfLifeCell[][] getBoard() {
-        GameOfLifeCell[][] boardCopy = new GameOfLifeCell[board.length][board[0].length];
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
-                boardCopy[i][j] = board[i][j];
-            }
+    public List<List<GameOfLifeCell>> getBoard() {
+        List<List<GameOfLifeCell>> boardCopy = new ArrayList<>();
+        for (List<GameOfLifeCell> row : board) {
+            List<GameOfLifeCell> rowCopy = new ArrayList<>(row);
+            boardCopy.add(rowCopy);
         }
         return boardCopy;
     }
 
     public GameOfLifeBoard(boolean[][] newBoard) {
-        this.board = new GameOfLifeCell[newBoard.length][newBoard[0].length];
-        for (int i = 0; i < newBoard.length; i++) {
-            for (int j = 0; j < newBoard[i].length; j++) {
-                this.board[i][j] = new GameOfLifeCell(newBoard[i][j]);
+        this.board = new ArrayList<>();
+        for (boolean[] row : newBoard) {
+            List<GameOfLifeCell> newRow = new ArrayList<>();
+            for (boolean cell : row) {
+                newRow.add(new GameOfLifeCell(cell));
             }
+            this.board.add(Collections.unmodifiableList(newRow));
         }
-        final int n = this.board.length;
-        final int m = this.board[0].length;
+
+        final int n = this.board.size();
+        final int m = this.board.get(0).size();
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                this.board[i][j].initNeighbours(board,i,j);
+                this.board.get(i).get(j).initNeighbours(board, i, j);
             }
         }
     }
 
     public GameOfLifeBoard(int n, int m) {
         Random rand = new Random();
-        this.board = new GameOfLifeCell[n][m];
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
-                this.board[i][j] = new GameOfLifeCell(rand.nextBoolean());
+        this.board = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            List<GameOfLifeCell> row = new ArrayList<>();
+            for (int j = 0; j < m; j++) {
+                row.add(new GameOfLifeCell(rand.nextBoolean()));
             }
+            this.board.add(Collections.unmodifiableList(row));
         }
 
+        final int rows = this.board.size();
+        final int cols = this.board.get(0).size();
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                this.board.get(i).get(j).initNeighbours(board, i, j);
+            }
+        }
     }
 
     public boolean get(int x, int y) {
-        return board[x][y].getCellValue();
+        return board.get(x).get(y).getCellValue();
     }
 
     public void set(int x, int y, boolean value) {
-        board[x][y].updateState(value);
+        board.get(x).get(y).updateState(value);
     }
 
     public GameOfLifeColumn getColumn(int index) {

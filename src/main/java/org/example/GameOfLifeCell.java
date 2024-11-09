@@ -38,19 +38,19 @@ public class GameOfLifeCell {
         return count;
     }
 
-    public void initNeighbours(GameOfLifeCell[][] board,int i,int j) {
-        final int n = board.length;
-        final int m = board[0].length;
-        board[i][j].neighbours[0] = board[(i + 1 + n) % n][(j + 1 + m) % m];
-        board[i][j].neighbours[1] = board[(i + 1 + n) % n][(j - 1 + m) % m];
-        board[i][j].neighbours[2] = board[(i + 1 + n) % n][j % m];
+    public void initNeighbours(List<List<GameOfLifeCell>> board, int i, int j) {
+        final int n = board.size();
+        final int m = board.get(0).size();
+        neighbours[0] = board.get((i + 1 + n) % n).get((j + 1 + m) % m);
+        neighbours[1] = board.get((i + 1 + n) % n).get((j - 1 + m) % m);
+        neighbours[2] = board.get((i + 1 + n) % n).get(j % m);
 
-        board[i][j].neighbours[3] = board[i % n][(j - 1 + m) % m];
-        board[i][j].neighbours[4] = board[i % n][(j + 1 + m) % m];
+        neighbours[3] = board.get(i % n).get((j - 1 + m) % m);
+        neighbours[4] = board.get(i % n).get((j + 1 + m) % m);
 
-        board[i][j].neighbours[5] = board[(i - 1 + n) % n][(j + 1 + m) % m];
-        board[i][j].neighbours[6] = board[(i - 1 + n) % n][(j - 1 + m) % m];
-        board[i][j].neighbours[7] = board[(i - 1 + n) % n][j % m];
+        neighbours[5] = board.get((i - 1 + n) % n).get((j + 1 + m) % m);
+        neighbours[6] = board.get((i - 1 + n) % n).get((j - 1 + m) % m);
+        neighbours[7] = board.get((i - 1 + n) % n).get(j % m);
     }
 
     public void setNeighbours(GameOfLifeCell cell) {
