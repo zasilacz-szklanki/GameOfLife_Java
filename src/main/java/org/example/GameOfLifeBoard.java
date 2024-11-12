@@ -18,14 +18,15 @@ public class GameOfLifeBoard {
     }
 
     public GameOfLifeBoard(boolean[][] newBoard) {
-        this.board = new ArrayList<>();
+        List<List<GameOfLifeCell>> tmpBoard = new ArrayList<>();
         for (boolean[] row : newBoard) {
             List<GameOfLifeCell> newRow = new ArrayList<>();
             for (boolean cell : row) {
                 newRow.add(new GameOfLifeCell(cell));
             }
-            this.board.add(Collections.unmodifiableList(newRow));
+            tmpBoard.add(Collections.unmodifiableList(newRow));
         }
+        this.board = Collections.unmodifiableList(tmpBoard);
 
         final int n = this.board.size();
         final int m = this.board.get(0).size();
@@ -39,14 +40,15 @@ public class GameOfLifeBoard {
 
     public GameOfLifeBoard(int n, int m) {
         Random rand = new Random();
-        this.board = new ArrayList<>();
+        List<List<GameOfLifeCell>> tmpBoard = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             List<GameOfLifeCell> row = new ArrayList<>();
             for (int j = 0; j < m; j++) {
                 row.add(new GameOfLifeCell(rand.nextBoolean()));
             }
-            this.board.add(Collections.unmodifiableList(row));
+            tmpBoard.add(Collections.unmodifiableList(row));
         }
+        this.board = Collections.unmodifiableList(tmpBoard);
 
         final int rows = this.board.size();
         final int cols = this.board.get(0).size();
