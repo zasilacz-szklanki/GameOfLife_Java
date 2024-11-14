@@ -125,5 +125,11 @@ class PlainGameOfLifeSimulatorTest {
         golb.doSimulationStep(simulatorGolb);
         assert (!golb.getBoard().get(1).get(1).getCellValue());
         assert (!golb.getBoard().get(0).get(1).getCellValue());
+
+        GameOfLifeSimulator simulator2 = new PlainGameOfLifeSimulator();
+        assert (simulatorGolb.equals(simulatorGolb));
+        assert (!simulatorGolb.equals(golb));
+        assert (!simulatorGolb.equals(null));
+        assert (simulatorGolb.equals(simulator2));
     }
 }

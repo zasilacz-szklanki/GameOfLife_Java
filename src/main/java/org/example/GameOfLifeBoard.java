@@ -1,5 +1,10 @@
 package org.example;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -78,5 +83,35 @@ public class GameOfLifeBoard {
 
     public void doSimulationStep(GameOfLifeSimulator simulation) {
         simulation.doStep(this);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("\n");
+        for (List<GameOfLifeCell> row : board) {
+            for (GameOfLifeCell cell : row) {
+                builder.append(cell.getCellValue() ? "alive" : "dead").append(" ");
+            }
+            builder.append("\n");
+        }
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append(builder.toString()).toString();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        GameOfLifeBoard object = (GameOfLifeBoard) obj;
+        return new EqualsBuilder().append(board, object.board).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(board).toHashCode();
     }
 }

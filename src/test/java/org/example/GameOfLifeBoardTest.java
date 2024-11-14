@@ -1,5 +1,6 @@
 package org.example;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -84,5 +85,66 @@ class GameOfLifeBoardTest {
         for (int i = 0; i < board.getBoard().get(0).size(); i++) {
             assert (board.getBoard().get(1).get(i).getCellValue() == row.getSegment().get(i).getCellValue());
         }
+    }
+
+    @Test
+    void test6() {
+        // testy dla metody toString()
+        boolean[][] testBoard = {
+                {false, false},
+                {false, true}
+        };
+
+        GameOfLifeBoard board = new GameOfLifeBoard(testBoard);
+        GameOfLifeRow row = board.getRow(1);
+        GameOfLifeColumn column = board.getColumn(0);
+        GameOfLifeCell cell = board.getBoard().get(0).get(0);
+        GameOfLifeCell cell2 = board.getBoard().get(1).get(1);
+        GameOfLifeSimulator sim = new PlainGameOfLifeSimulator();
+
+        String boardExpected = "GameOfLifeBoard[\n" +
+                "dead dead \n" +
+                "dead alive \n" +
+                "]";
+        String cellExpected = "GameOfLifeCell[cell state=dead]";
+        String cell2Expected = "GameOfLifeCell[cell state=alive]";
+        String plainSimExpected = "PlainGameOfLifeSimulator[class org.example.PlainGameOfLifeSimulator]";
+
+        assertEquals(board.toString(), boardExpected);
+        assertEquals(cell.toString(), cellExpected);
+        assertEquals(cell2.toString(), cell2Expected);
+        assertEquals(sim.toString(), plainSimExpected);
+    }
+
+    @Test
+    void test7() {
+        // testy dla metody equals() i hashCode()
+        boolean[][] testBoard = {
+                {false, false},
+                {false, true}
+        };
+        boolean[][] testBoard2 = {
+                {true, true},
+                {false, false}
+        };
+
+        GameOfLifeBoard board = new GameOfLifeBoard(testBoard);
+        GameOfLifeRow row = board.getRow(1);
+        GameOfLifeBoard board2 = new GameOfLifeBoard(testBoard2);
+        GameOfLifeBoard board3 = new GameOfLifeBoard(testBoard);
+        GameOfLifeCell cell = board.getBoard().get(0).get(0);
+        GameOfLifeCell cell2 = board.getBoard().get(1).get(0);
+
+        assert(board.equals(board));
+        assert(!board.equals(row));
+        assert(!board.equals(null));
+        assert(!board.equals(board2));
+
+        assert(cell.equals(cell));
+        assert(!cell.equals(row));
+        assert(!cell.equals(null));
+        assert(cell.equals(cell2));
+
+        assert (board.hashCode() == board3.hashCode());
     }
 }

@@ -1,5 +1,10 @@
 package org.example;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,5 +74,50 @@ public abstract class GameOfLifeSegment implements Observer<GameOfLifeCell> {
             }
         }
         return count;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("\n");
+        for (GameOfLifeCell cell : segment) {
+            if (type) {
+                builder.append(cell.getCellValue() ? "alive" : "dead").append(" ");
+            } else {
+                builder.append(cell.getCellValue() ? "alive" : "dead").append("\n");
+            }
+        }
+        if (type) {
+            builder.append("\n");
+            return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+                    .append(builder.toString()).toString();
+        }
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+                .append(builder.toString()).toString();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        GameOfLifeSegment object = (GameOfLifeSegment) obj;
+        return new EqualsBuilder()
+                .append(segmentIndex, object.segmentIndex)
+                .append(type, object.type)
+                .append(segment, object.segment)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+                .append(segmentIndex)
+                .append(type)
+                .append(segment)
+                .toHashCode();
     }
 }
