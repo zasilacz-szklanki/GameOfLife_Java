@@ -124,27 +124,27 @@ class GameOfLifeBoardTest {
                 {false, true}
         };
         boolean[][] testBoard2 = {
-                {true, true},
-                {false, false}
+                {false, false},
+                {false, true}
         };
 
         GameOfLifeBoard board = new GameOfLifeBoard(testBoard);
-        GameOfLifeRow row = board.getRow(1);
         GameOfLifeBoard board2 = new GameOfLifeBoard(testBoard2);
-        GameOfLifeBoard board3 = new GameOfLifeBoard(testBoard);
-        GameOfLifeCell cell = board.getBoard().get(0).get(0);
-        GameOfLifeCell cell2 = board.getBoard().get(1).get(0);
+//        GameOfLifeBoard board3 = new GameOfLifeBoard(testBoard);
+        GameOfLifeCell cell = board.getBoard().get(1).get(0);
+        GameOfLifeCell cell2 = board2.getBoard().get(1).get(0);
+        GameOfLifeRow row = board.getRow(1);
 
         assert(board.equals(board));
         assert(!board.equals(row));
         assert(!board.equals(null));
-        assert(!board.equals(board2));
-
+        assert(board.equals(board2));
         assert(cell.equals(cell));
         assert(!cell.equals(row));
         assert(!cell.equals(null));
         assert(cell.equals(cell2));
-
-        assert (board.hashCode() == board3.hashCode());
+        assert (board.hashCode() == board2.hashCode());
+        assert (cell.hashCode() == cell2.hashCode());
+        assert(cell.equals(cell2));
     }
 }

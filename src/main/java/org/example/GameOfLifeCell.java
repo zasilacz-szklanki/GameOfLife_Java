@@ -5,6 +5,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GameOfLifeCell {
@@ -101,11 +102,27 @@ public class GameOfLifeCell {
             return false;
         }
         GameOfLifeCell object = (GameOfLifeCell) obj;
-        return new EqualsBuilder().append(value, object.value).isEquals();
+
+        EqualsBuilder eb = new EqualsBuilder().append(this.value, object.value);
+
+        List<Boolean> thisN = new ArrayList<>();
+        List<Boolean> objectN = new ArrayList<>();
+
+        for (int i = 0; i < this.neighbours.length; i++) {
+            thisN.add(this.neighbours[i].value);
+            objectN.add(object.neighbours[i].value);
+        }
+
+        eb.append(thisN, objectN);
+        return eb.isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(value).toHashCode();
+        List<Boolean> thisN = new ArrayList<>();
+        for (int i = 0; i < this.neighbours.length; i++) {
+            thisN.add(this.neighbours[i].value);
+        }
+        return new HashCodeBuilder(17, 37).append(value).append(thisN).toHashCode();
     }
 }
