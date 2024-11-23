@@ -3,17 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>org.example</groupId>
-    <artifactId>GameOfLife</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <licenses>
-        <license>
-            <name>Eclipse Public License v2.0</name>
-            <url>https://www.eclipse.org/legal/epl-2.0/</url>
-        </license>
-    </licenses>
+    <groupId>pl.comp</groupId>
+    <artifactId>GOLproject</artifactId>
+    <version>2.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>Model</module>
+        <module>View</module>
+    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <build>
         <plugins>
@@ -73,7 +73,7 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.3.1</version>
                 <configuration>
-                    <configLocation>checkstyle2023.xml</configLocation>
+                    <configLocation>./checkstyle2023.xml</configLocation>
                 </configuration>
                 <executions>
                     <execution>
@@ -110,6 +110,44 @@
                 <artifactId>maven-site-plugin</artifactId>
                 <version>4.0.0-M13</version>
             </plugin>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <executions>
+                    <execution>
+                        <!-- Default configuration for running with: mvn clean javafx:run -->
+                        <id>default-cli</id>
+                        <configuration>
+                            <mainClass>org.example.view_pre/org.example.view_pre.HelloApplication</mainClass>
+                            <launcher>app</launcher>
+                            <jlinkZipName>app</jlinkZipName>
+                            <jlinkImageName>app</jlinkImageName>
+                            <noManPages>true</noManPages>
+                            <stripDebug>true</stripDebug>
+                            <noHeaderFiles>true</noHeaderFiles>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <repository>
+                        <id>central-repo</id>
+                        <url>file://${project.basedir}/target/site</url>
+                    </repository>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -125,26 +163,21 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.13.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>17.0.6</version>
+        </dependency>
     </dependencies>
 
     <reporting>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jxr-plugin</artifactId>
-                <version>3.3.0</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>3.6.2</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.3.1</version>
                 <configuration>
-                    <configLocation>checkstyle2023.xml</configLocation>
+                    <configLocation>../checkstyle2023.xml</configLocation>
                     <inputEncoding>UTF-8</inputEncoding>
                     <consoleOutput>true</consoleOutput>
                     <linkXRef>false</linkXRef>
@@ -156,6 +189,16 @@
                         </reports>
                     </reportSet>
                 </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>3.3.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.6.2</version>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -185,27 +228,16 @@
         </plugins>
     </reporting>
 
-    <properties>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>23</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
-    <developers>
-        <developer>
-            <id>251589</id>
-            <name>Maciej Miazek</name>
-            <email>251589@edu.p.lodz.pl</email>
-        </developer>
-        <developer>
-            <id>251485</id>
-            <name>Kacper Błaszczyk</name>
-            <email>251485@edu.p.lodz.pl</email>
-        </developer>
-    </developers>
-
-    <description>Zespół_7</description>
+    <distributionManagement>
+        <site>
+            <id>site</id>
+            <name>NAZWA</name>
+            <url>file://${project.basedir}/target/site</url>
+        </site>
+        <repository>
+            <id>repo</id>
+            <url>file://${project.basedir}/target/site</url>
+        </repository>
+    </distributionManagement>
 
 </project>
