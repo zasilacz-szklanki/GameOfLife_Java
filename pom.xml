@@ -11,9 +11,29 @@
         <module>Model</module>
         <module>View</module>
     </modules>
+
     <properties>
+        <maven.compiler.source>23</maven.compiler.source>
+        <maven.compiler.target>23</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>23</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <developers>
+        <developer>
+            <id>251589</id>
+            <name>Maciej Miazek</name>
+            <email>251589@edu.p.lodz.pl</email>
+        </developer>
+        <developer>
+            <id>251485</id>
+            <name>Kacper Błaszczyk</name>
+            <email>251485@edu.p.lodz.pl</email>
+        </developer>
+    </developers>
+
+    <description>Zespół_7</description>
 
     <build>
         <plugins>
@@ -116,10 +136,9 @@
                 <version>0.0.8</version>
                 <executions>
                     <execution>
-                        <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.example.view_pre/org.example.view_pre.HelloApplication</mainClass>
+                            <mainClass>org.example/org.example.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
@@ -129,24 +148,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>deploy</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <repository>
-                        <id>central-repo</id>
-                        <url>file://${project.basedir}/target/site</url>
-                    </repository>
-                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -177,7 +178,7 @@
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.3.1</version>
                 <configuration>
-                    <configLocation>../checkstyle2023.xml</configLocation>
+                    <configLocation>./checkstyle2023.xml</configLocation>
                     <inputEncoding>UTF-8</inputEncoding>
                     <consoleOutput>true</consoleOutput>
                     <linkXRef>false</linkXRef>
@@ -232,12 +233,8 @@
         <site>
             <id>site</id>
             <name>NAZWA</name>
-            <url>file://${project.basedir}/target/site</url>
+            <url>${project.basedir}/site</url>
         </site>
-        <repository>
-            <id>repo</id>
-            <url>file://${project.basedir}/target/site</url>
-        </repository>
     </distributionManagement>
 
 </project>
