@@ -1,4 +1,3 @@
-module Model {
-    requires java.base;
+module org.example.Model {
     exports org.example.Model;
 }

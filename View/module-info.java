@@ -1,5 +1,4 @@
-module View {
-    requires java.base;
+module org.example.View {
     requires org.example.Model;
     exports org.example.View;
 }

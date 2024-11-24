@@ -1,4 +1,4 @@
-package org.example;
+package org.example.View;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+
+import org.example.Model.*;
 
 public class HelloApplication extends Application {
     @Override
@@ -16,7 +18,7 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
+    GameOfLifeBoard golb;
     public static void main(String[] args) {
         launch();
     }

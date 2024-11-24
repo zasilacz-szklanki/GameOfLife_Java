@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Model;
 
 public interface Dao<T> extends AutoCloseable {
     T read();
