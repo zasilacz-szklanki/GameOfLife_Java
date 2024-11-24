@@ -1,3 +1,3 @@
-module org.example.Model {
-    exports org.example.Model;
+module org.example.model {
+    exports org.example.model;
 }

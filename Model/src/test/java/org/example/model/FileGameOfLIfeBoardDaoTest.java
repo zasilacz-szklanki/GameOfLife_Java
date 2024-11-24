@@ -1,8 +1,8 @@
-package org.example.Model;
+package org.example.model;
 
 import org.junit.jupiter.api.Test;
 
-public class GameOfLifeBoardDaoFactoryTest {
+public class FileGameOfLIfeBoardDaoTest {
     @Test
     void test1() {
         //testy dla odczytu z pliku
@@ -16,7 +16,7 @@ public class GameOfLifeBoardDaoFactoryTest {
         GameOfLifeBoard golb2 = new GameOfLifeBoard(board);
 
         //try-with-resources
-        try (Dao<GameOfLifeBoard> dao = GameOfLifeBoardDaoFactory.getFileDao("in.txt")) {
+        try (FileGameOfLifeBoardDao dao = new FileGameOfLifeBoardDao("in.txt")) {
             golb = dao.read();
             assert golb.equals(golb2);
             System.out.println(golb);
@@ -30,24 +30,19 @@ public class GameOfLifeBoardDaoFactoryTest {
     @Test
     void test2() {
         //testy dla zapisu do pliku
-        boolean[][] board = {
-                {false, false, false},
-                {false, true, true},
-                {true, false, true},
-                {true, true, false}
-        };
+        boolean[][] board = {{false, false, false}, {false, true, true}, {true, false, true}, {true, true, false}};
         GameOfLifeBoard golb = new GameOfLifeBoard(board);
         GameOfLifeBoard golb2;
         //zapis do pliku
-        try (Dao<GameOfLifeBoard> dao = GameOfLifeBoardDaoFactory.getFileDao("out.txt")) {
+        try (FileGameOfLifeBoardDao dao = new FileGameOfLifeBoardDao("out.txt")) {
             dao.write(golb);
         } catch (Exception e) {
             assert false;
         }
 
         //sprawdzenie odczytu z zapisanego pliku
-        try (Dao<GameOfLifeBoard> file = GameOfLifeBoardDaoFactory.getFileDao("out.txt")) {
-            golb2 = file.read();
+        try (FileGameOfLifeBoardDao dao = new FileGameOfLifeBoardDao("out.txt")) {
+            golb2 = dao.read();
             assert golb.equals(golb2);
         } catch (Exception e) {
             assert false;

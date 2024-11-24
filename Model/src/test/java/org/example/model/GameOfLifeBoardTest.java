@@ -1,4 +1,4 @@
-package org.example.Model;
+package org.example.model;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
@@ -108,7 +108,7 @@ class GameOfLifeBoardTest {
                 "]";
         String cellExpected = "GameOfLifeCell[cell state=dead]";
         String cell2Expected = "GameOfLifeCell[cell state=alive]";
-        String plainSimExpected = "PlainGameOfLifeSimulator[class org.example.PlainGameOfLifeSimulator]";
+        String plainSimExpected = "PlainGameOfLifeSimulator[class org.example.model.PlainGameOfLifeSimulator]";
 
         assertEquals(board.toString(), boardExpected);
         assertEquals(cell.toString(), cellExpected);

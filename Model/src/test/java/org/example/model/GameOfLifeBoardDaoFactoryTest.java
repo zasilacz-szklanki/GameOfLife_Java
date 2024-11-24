@@ -1,20 +1,22 @@
-package org.example.Model;
+package org.example.model;
 
 import org.junit.jupiter.api.Test;
 
-public class FileGameOfLIfeBoardDaoTest {
-
+public class GameOfLifeBoardDaoFactoryTest {
     @Test
     void test1() {
         //testy dla odczytu z pliku
         boolean[][] board = {
                 {false, false, false},
-                {false, true, true}, {true, false, true}, {true, true, false}};
+                {false, true, true},
+                {true, false, true},
+                {true, true, false}
+        };
         GameOfLifeBoard golb;
         GameOfLifeBoard golb2 = new GameOfLifeBoard(board);
 
         //try-with-resources
-        try (FileGameOfLifeBoardDao dao = new FileGameOfLifeBoardDao("in.txt")) {
+        try (Dao<GameOfLifeBoard> dao = GameOfLifeBoardDaoFactory.getFileDao("in.txt")) {
             golb = dao.read();
             assert golb.equals(golb2);
             System.out.println(golb);
@@ -28,19 +30,24 @@ public class FileGameOfLIfeBoardDaoTest {
     @Test
     void test2() {
         //testy dla zapisu do pliku
-        boolean[][] board = {{false, false, false}, {false, true, true}, {true, false, true}, {true, true, false}};
+        boolean[][] board = {
+                {false, false, false},
+                {false, true, true},
+                {true, false, true},
+                {true, true, false}
+        };
         GameOfLifeBoard golb = new GameOfLifeBoard(board);
         GameOfLifeBoard golb2;
         //zapis do pliku
-        try (FileGameOfLifeBoardDao dao = new FileGameOfLifeBoardDao("out.txt")) {
+        try (Dao<GameOfLifeBoard> dao = GameOfLifeBoardDaoFactory.getFileDao("out.txt")) {
             dao.write(golb);
         } catch (Exception e) {
             assert false;
         }
 
         //sprawdzenie odczytu z zapisanego pliku
-        try (FileGameOfLifeBoardDao dao = new FileGameOfLifeBoardDao("out.txt")) {
-            golb2 = dao.read();
+        try (Dao<GameOfLifeBoard> file = GameOfLifeBoardDaoFactory.getFileDao("out.txt")) {
+            golb2 = file.read();
             assert golb.equals(golb2);
         } catch (Exception e) {
             assert false;

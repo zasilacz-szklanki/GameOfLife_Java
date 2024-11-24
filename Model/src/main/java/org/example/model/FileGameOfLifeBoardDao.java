@@ -1,4 +1,4 @@
-package org.example.Model;
+package org.example.model;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
