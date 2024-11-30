@@ -8,7 +8,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameOfLifeCell {
+public class GameOfLifeCell implements Cloneable, Comparable<GameOfLifeCell> {
     private boolean value;
     private GameOfLifeCell[] neighbours;
     private ObservatorsManagement<GameOfLifeCell> observers;
@@ -58,12 +58,12 @@ public class GameOfLifeCell {
         neighbours[7] = board.get((i - 1 + n) % n).get(j % m);
     }
 
-    public void setNeighbours(GameOfLifeCell cell) {
-        this.neighbours = new GameOfLifeCell[8];
-        for (int i = 0; i < cell.neighbours.length; i++) {
-            this.neighbours[i] = new GameOfLifeCell(cell.neighbours[i]);
-        }
-    }
+    //    public void setNeighbours(GameOfLifeCell cell) {
+    //        this.neighbours = new GameOfLifeCell[8];
+    //        for (int i = 0; i < cell.neighbours.length; i++) {
+    //            this.neighbours[i] = new GameOfLifeCell(cell.neighbours[i]);
+    //        }
+    //    }
 
     public boolean getCellValue() {
         return this.value;
@@ -124,5 +124,26 @@ public class GameOfLifeCell {
             thisN.add(this.neighbours[i].value);
         }
         return new HashCodeBuilder(17, 37).append(value).append(thisN).toHashCode();
+    }
+
+    @Override
+    public GameOfLifeCell clone() {
+        try {
+            GameOfLifeCell cloned = (GameOfLifeCell) super.clone();
+            cloned.neighbours = new GameOfLifeCell[8];
+            System.arraycopy(this.neighbours, 0, cloned.neighbours, 0, this.neighbours.length);
+            cloned.observers = new ObservatorsManagement<>();
+            return cloned;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError(e);
+        }
+    }
+
+    @Override
+    public int compareTo(GameOfLifeCell other) {
+        if (other == null) {
+            throw new NullPointerException();
+        }
+        return Boolean.compare(this.value, other.value);
     }
 }

@@ -11,8 +11,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class GameOfLifeBoard implements Serializable {
-    private final List<List<GameOfLifeCell>> board;
+public class GameOfLifeBoard implements Serializable, Cloneable {
+    private List<List<GameOfLifeCell>> board;
 
     public List<List<GameOfLifeCell>> getBoard() {
         List<List<GameOfLifeCell>> boardCopy = new ArrayList<>();
@@ -114,5 +114,24 @@ public class GameOfLifeBoard implements Serializable {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(board).toHashCode();
+    }
+
+    @Override
+    public GameOfLifeBoard clone() {
+        try {
+            GameOfLifeBoard copied = (GameOfLifeBoard) super.clone();
+            List<List<GameOfLifeCell>> tmpBoard = new ArrayList<>();
+            for (List<GameOfLifeCell> row : this.board) {
+                List<GameOfLifeCell> tmpRow = new ArrayList<>();
+                for (GameOfLifeCell cell : row) {
+                    tmpRow.add(cell.clone());
+                }
+                tmpBoard.add(Collections.unmodifiableList(tmpRow));
+            }
+            copied.board = Collections.unmodifiableList(tmpBoard);
+            return copied;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError(e);
+        }
     }
 }

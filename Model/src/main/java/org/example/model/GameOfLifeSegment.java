@@ -8,8 +8,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class GameOfLifeSegment implements Observer<GameOfLifeCell> {
-    protected final List<GameOfLifeCell> segment;
+public abstract class GameOfLifeSegment implements Observer<GameOfLifeCell>, Cloneable {
+    protected List<GameOfLifeCell> segment;
     protected List<List<GameOfLifeCell>> board;
     protected int segmentIndex;
     protected boolean type;
@@ -119,5 +119,20 @@ public abstract class GameOfLifeSegment implements Observer<GameOfLifeCell> {
                 .append(type)
                 .append(segment)
                 .toHashCode();
+    }
+
+    @Override
+    public GameOfLifeSegment clone() {
+        try {
+            GameOfLifeSegment cloned = (GameOfLifeSegment) super.clone();
+            List<GameOfLifeCell> tmpSegment = new ArrayList<>(this.segment.size());
+            for (GameOfLifeCell cell : this.segment) {
+                tmpSegment.add(cell.clone());
+            }
+            cloned.segment = tmpSegment;
+            return cloned;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError(e);
+        }
     }
 }

@@ -78,4 +78,13 @@ class GameOfLifeSegmentTest {
         assert (!row.equals(null));
         assert (row.equals(row2));
     }
+
+    @Test
+    void test4() {
+        GameOfLifeBoard board = new GameOfLifeBoard(5, 5);
+        GameOfLifeColumn column = board.getColumn(1);
+        GameOfLifeRow row = board.getRow(1);
+        assert(column.equals(column.clone()));
+        assert(row.equals(row.clone()));
+    }
 }

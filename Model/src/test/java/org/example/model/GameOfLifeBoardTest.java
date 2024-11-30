@@ -147,4 +147,25 @@ class GameOfLifeBoardTest {
         assert (cell.hashCode() == cell2.hashCode());
         assert(cell.equals(cell2));
     }
+
+    @Test
+    void test8() {
+        boolean[][] testBoard = {
+                {false, false},
+                {false, true}
+        };
+
+        GameOfLifeBoard board = new GameOfLifeBoard(testBoard);
+        assert(board.getBoard().get(0).get(0).compareTo(board.getBoard().get(1).get(1)) == -1);
+        assert(board.getBoard().get(0).get(0).compareTo(board.getBoard().get(1).get(0)) == 0);
+        assert(board.getBoard().get(1).get(1).compareTo(board.getBoard().get(0).get(0)) == 1);
+    }
+
+    @Test
+    void test9() {
+        GameOfLifeBoard board = new GameOfLifeBoard(5, 5);
+        GameOfLifeCell cell = board.getBoard().get(1).get(1);
+        assert(board.equals(board.clone()));
+        assert(cell.equals(cell.clone()));
+    }
 }

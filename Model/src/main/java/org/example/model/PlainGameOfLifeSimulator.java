@@ -5,32 +5,21 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class PlainGameOfLifeSimulator implements GameOfLifeSimulator {
     @Override
     public void doStep(GameOfLifeBoard board) {
-        List<List<GameOfLifeCell>> current = board.getBoard();
-        List<List<GameOfLifeCell>> next = new ArrayList<>();
 
-        for (int i = 0; i < current.size(); i++) {
-            List<GameOfLifeCell> newRow = new ArrayList<>();
-            for (int j = 0; j < current.get(i).size(); j++) {
-                newRow.add(new GameOfLifeCell(current.get(i).get(j)));
-            }
-            next.add(newRow);
-        }
+        GameOfLifeBoard next = board.clone();
 
-        for (int i = 0; i < next.size(); i++) {
-            for (int j = 0; j < next.get(i).size(); j++) {
-                next.get(i).get(j).setNeighbours(current.get(i).get(j));
+        for (int i = 0; i < next.getBoard().size(); i++) {
+            for (int j = 0; j < next.getBoard().get(i).size(); j++) {
+                next.getBoard().get(i).get(j).updateState(board.getBoard().get(i).get(j).nextState());
             }
         }
 
-        for (int i = 0; i < current.size(); i++) {
-            for (int j = 0; j < current.get(i).size(); j++) {
-                current.get(i).get(j).updateState(next.get(i).get(j).nextState());
+        for (int i = 0; i < next.getBoard().size(); i++) {
+            for (int j = 0; j < next.getBoard().get(i).size(); j++) {
+                board.set(i, j, next.get(i, j));
             }
         }
     }
