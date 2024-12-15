@@ -45,6 +45,7 @@ public class GameOfLifeBoard implements Serializable, Cloneable {
     }
 
     public GameOfLifeBoard(int n, int m) {
+
         Random rand = new Random();
         List<List<GameOfLifeCell>> tmpBoard = new ArrayList<>();
         for (int i = 0; i < n; i++) {
