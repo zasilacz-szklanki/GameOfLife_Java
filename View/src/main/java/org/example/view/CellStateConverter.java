@@ -20,8 +20,4 @@ public class CellStateConverter extends StringConverter<Boolean> {
     public Boolean fromColor(String color) {
         return "#00ff00".equalsIgnoreCase(color);
     }
-
-    public String fromBooleanToString(Boolean bool) {
-        return bool ? "1" : "0";
-    }
 }

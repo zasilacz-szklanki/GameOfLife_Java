@@ -238,7 +238,7 @@ public class GolApplication extends Application {
                     if (isColorMode[0]) {
                         label[finalRow][finalCol].setStyle("-fx-text-fill: " + converter.toColor(newState) + ";");
                     } else {
-                        label[finalRow][finalCol].setText(converter.fromBooleanToString(newState));
+                        label[finalRow][finalCol].setText(converter.toString(newState));
                         label[finalRow][finalCol].setStyle("-fx-text-fill: " + converter.toColor(newState) + ";");
                     }
                 });
@@ -269,7 +269,7 @@ public class GolApplication extends Application {
             for (int row = 0; row < golb.getBoard().size(); row++) {
                 for (int col = 0; col < golb.getBoard().get(row).size(); col++) {
                     boolean cellValue = golb.get(row, col);
-                    label[row][col].setText(converter.fromBooleanToString(cellValue));
+                    label[row][col].setText(converter.toString(cellValue));
                     label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
                 }
             }
@@ -307,7 +307,7 @@ public class GolApplication extends Application {
                         label[row][col].setText(fullBlock);
                         label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
                     } else {
-                        label[row][col].setText(converter.fromBooleanToString(cellValue));
+                        label[row][col].setText(converter.toString(cellValue));
                         label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
                     }
                 }
