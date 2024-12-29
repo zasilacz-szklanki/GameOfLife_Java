@@ -1,21 +1,18 @@
 package org.example.view;
 
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.StackPane;
-import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.example.model.Density;
 import org.example.model.FileGameOfLifeBoardDao;
 import org.example.model.GameOfLifeBoard;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.util.Locale;
 import java.util.ResourceBundle;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class ConfigController {
 
@@ -78,6 +75,28 @@ public class ConfigController {
         currentLanguage = language;
     }
 
+    private int[] sizeToInteger(String sx, String sy) throws NumberException {
+        int[] a = new int[2];
+        try {
+            a[0] = Integer.parseInt(sx);
+            a[1] = Integer.parseInt(sy);
+        } catch (NumberFormatException e) {
+            throw new NumberException();
+        }
+        return a;
+    }
+
+    private void writeToFile(File file, Stage primaryStage) throws MyException {
+        try (FileGameOfLifeBoardDao dao = new FileGameOfLifeBoardDao(file.getAbsolutePath())) {
+            golb = dao.read();
+            primaryStage.close();
+            SimulationController.openSimulationWindow(golb, currentLanguage);
+            logger.info(resourceBundle.getString("action.loadedFromFile") + " " + file.getAbsolutePath());
+        } catch (Exception e) {
+            throw new MyException();
+        }
+    }
+
     @FXML
     public void initialize() {
         loadResourceBundle(currentLanguage);
@@ -108,12 +127,12 @@ public class ConfigController {
 
         authorsItem.setOnAction(event -> {
             String msg = authorsResourceBundle.getString("author1") + "\n" + authorsResourceBundle.getString("author2");
-            messageWindow(msg);
+            MessageWindow.messageWindow(msg, resourceBundle.getString("app.messageTitle"));
             logger.info(resourceBundle.getString("action.authorsShowed"));
         });
 
         licenseItem.setOnAction(event -> {
-            messageWindow("Eclipse Public License - v 2.0");
+            MessageWindow.messageWindow("Eclipse Public License - v 2.0", resourceBundle.getString("app.messageTitle"));
             logger.info(resourceBundle.getString("action.licenseShowed"));
         });
 
@@ -128,27 +147,33 @@ public class ConfigController {
             String sy = gridSizeYField.getText();
 
             if (sx.isBlank() || sy.isBlank()) {
-                errorMessageWindow(resourceBundle.getString("error.blankInput"));
+                MessageWindow.errorMessageWindow(resourceBundle.getString("error.blankInput"),
+                        resourceBundle.getString("app.errorTitle"));
                 return;
             }
 
             final int gridSizeX;
             final int gridSizeY;
+            int[] arr;
             try {
-                gridSizeX = Integer.parseInt(sx);
-                gridSizeY = Integer.parseInt(sy);
-            } catch (NumberFormatException e) {
-                errorMessageWindow(resourceBundle.getString("error.numberFormatException"));
+                arr = sizeToInteger(sx, sy);
+            } catch (NumberException e) {
+                MessageWindow.errorMessageWindow(resourceBundle.getString("error.numberFormatException"),
+                        resourceBundle.getString("app.errorTitle"));
                 return;
             }
+            gridSizeX = arr[0];
+            gridSizeY = arr[1];
 
             if (gridSizeX < 4 || gridSizeX > 20 || gridSizeY < 4 || gridSizeY > 20) {
-                errorMessageWindow(resourceBundle.getString("error.wrongSize"));
+                MessageWindow.errorMessageWindow(resourceBundle.getString("error.wrongSize"),
+                        resourceBundle.getString("app.errorTitle"));
                 return;
             }
 
             if (densityChoiceBox.getValue() == null) {
-                errorMessageWindow(resourceBundle.getString("error.noDensitySelected"));
+                MessageWindow.errorMessageWindow(resourceBundle.getString("error.noDensitySelected"),
+                        resourceBundle.getString("app.errorTitle"));
                 return;
             }
 
@@ -163,13 +188,11 @@ public class ConfigController {
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Game of Life Files", "*.golf"));
             File file = fileChooser.showOpenDialog(primaryStage);
 
-            try (FileGameOfLifeBoardDao dao = new FileGameOfLifeBoardDao(file.getAbsolutePath())) {
-                golb = dao.read();
-                primaryStage.close();
-                SimulationController.openSimulationWindow(golb, currentLanguage);
-                logger.info(resourceBundle.getString("action.loadedFromFile") + " " + file.getAbsolutePath());
-            } catch (Exception e) {
-                errorMessageWindow(resourceBundle.getString("error.fileRead"));
+            try {
+                writeToFile(file, primaryStage);
+            } catch (MyException e) {
+                MessageWindow.errorMessageWindow(resourceBundle.getString("error.fileRead"),
+                        resourceBundle.getString("app.errorTitle"));
             }
         });
     }
@@ -189,37 +212,6 @@ public class ConfigController {
         licenseItem.setText(resourceBundle.getString("menu.item.license"));
         polItem.setText(resourceBundle.getString("menu.item.lang.polish"));
         deItem.setText(resourceBundle.getString("menu.item.lang.german"));
-    }
-
-    private void errorMessageWindow(String errMess) {
-        logger.error(errMess);
-        Stage window = new Stage();
-        window.setTitle(resourceBundle.getString("app.errorTitle"));
-
-        Label label = new Label(errMess);
-        label.setFont(Font.font("Courier New", 16));
-        label.setStyle("-fx-text-fill: #6e0000;-fx-font-weight: bold;");
-        StackPane stackPane = new StackPane();
-        stackPane.getChildren().add(label);
-
-        Scene newScene = new Scene(stackPane, 300, 100);
-        window.setScene(newScene);
-        window.show();
-    }
-
-    private void messageWindow(String mess) {
-        Stage window = new Stage();
-        window.setTitle(resourceBundle.getString("app.messageTitle"));
-
-        Label label = new Label(mess);
-        label.setFont(Font.font("Courier New", 16));
-        label.setStyle("-fx-text-fill: #00cb26;-fx-font-weight: bold;");
-        StackPane stackPane = new StackPane();
-        stackPane.getChildren().add(label);
-
-        Scene newScene = new Scene(stackPane, 300, 100);
-        window.setScene(newScene);
-        window.show();
     }
 
 }

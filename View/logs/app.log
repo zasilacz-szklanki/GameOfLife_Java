@@ -45,3 +45,38 @@ Maciej Miazek
 2024-12-29 20:24:00 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
 2024-12-29 20:24:01 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
 2024-12-29 20:24:01 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 22:39:29 ERROR org.example.view.ConfigController - Błędny format liczby
+2024-12-29 23:04:16 ERROR org.example.view.ConfigController - Puste pole
+2024-12-29 23:04:27 INFO  org.example.view.ConfigController - Sprache auf Deutsch geändert
+2024-12-29 23:04:28 ERROR org.example.view.ConfigController - Leeres Feld
+2024-12-29 23:04:44 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2024-12-29 23:04:48 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2024-12-29 23:04:50 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2024-12-29 23:04:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2024-12-29 23:04:51 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2024-12-29 23:04:51 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2024-12-29 23:04:52 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:04:53 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:04:53 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:04:53 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:04:53 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:04:54 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:04:55 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:04:55 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:04:55 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:04:55 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:04:56 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:04:56 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:04:56 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 23:05:04 ERROR org.example.view.ConfigController - Błąd przy zapisywaniu planszy
+2024-12-29 23:05:17 INFO  org.example.view.ConfigController - Sprache auf Deutsch geändert
+2024-12-29 23:05:18 INFO  org.example.view.ConfigController - Autoren angezeigt
+2024-12-29 23:05:30 INFO  org.example.view.ConfigController - Simulation gestartet
+2024-12-29 23:05:32 INFO  org.example.view.ConfigController - Der nächste Schritt der Simulation erfolgt
+2024-12-29 23:05:32 INFO  org.example.view.ConfigController - Der nächste Schritt der Simulation erfolgt
+2024-12-29 23:05:32 INFO  org.example.view.ConfigController - Der nächste Schritt der Simulation erfolgt
+2024-12-29 23:05:33 INFO  org.example.view.ConfigController - Der nächste Schritt der Simulation erfolgt
+2024-12-29 23:05:33 INFO  org.example.view.ConfigController - Der nächste Schritt der Simulation erfolgt
+2024-12-29 23:05:34 INFO  org.example.view.ConfigController - Der nächste Schritt der Simulation erfolgt
+2024-12-29 23:05:34 INFO  org.example.view.ConfigController - Der nächste Schritt der Simulation erfolgt
+2024-12-29 23:05:38 ERROR org.example.view.ConfigController - Fehler beim Speichern der Karte

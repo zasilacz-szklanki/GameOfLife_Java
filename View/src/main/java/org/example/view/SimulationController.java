@@ -11,12 +11,13 @@ import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.example.model.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.util.Locale;
 import java.util.ResourceBundle;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 public class SimulationController {
 
@@ -26,6 +27,15 @@ public class SimulationController {
 
     public static void loadResourceBundle(String language) {
         resourceBundle = ResourceBundle.getBundle("org.example.view.lang", new Locale(language));
+    }
+
+    private static void saveToFile(File file, GameOfLifeBoard golb) throws MyException {
+        try (Dao<GameOfLifeBoard> dao = GameOfLifeBoardDaoFactory.getFileDao(file.getAbsolutePath())) {
+            dao.write(golb);
+            logger.info(resourceBundle.getString("action.savedToFile") + " " + file.getAbsolutePath());
+        } catch (Exception e) {
+            throw new MyException();
+        }
     }
 
     public static void openSimulationWindow(GameOfLifeBoard golb, String language) {
@@ -119,11 +129,11 @@ public class SimulationController {
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Game of Life Files", "*.golf"));
             File file = fileChooser.showSaveDialog(newWindow);
 
-            try (Dao<GameOfLifeBoard> dao = GameOfLifeBoardDaoFactory.getFileDao(file.getAbsolutePath())) {
-                dao.write(golb);
-                logger.info(resourceBundle.getString("action.savedToFile") + " " + file.getAbsolutePath());
-            } catch (Exception e) {
-                System.out.println(resourceBundle.getString("error.fileWrite"));
+            try {
+                saveToFile(file,golb);
+            } catch (MyException e) {
+                MessageWindow.errorMessageWindow(resourceBundle.getString("error.fileWrite"),
+                        resourceBundle.getString("app.errorTitle"));
             }
         });
 
