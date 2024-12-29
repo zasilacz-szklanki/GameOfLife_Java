@@ -1,0 +1,47 @@
+2024-12-29 19:20:53 INFO  org.example.view.ConfigController - Info message: Kacper T. Błaszczyk
+Maciej Miazek
+2024-12-29 19:20:57 INFO  org.example.view.ConfigController - Info message: Eclipse Public License - v 2.0
+2024-12-29 19:21:28 INFO  org.example.view.ConfigController - Info message: Eclipse Public License - v 2.0
+2024-12-29 19:21:31 INFO  org.example.view.ConfigController - Info message: Kacper T. Błaszczyk
+Maciej Miazek
+2024-12-29 19:26:46 ERROR org.example.view.ConfigController - Error message: Puste pole
+2024-12-29 19:38:44 INFO  org.example.view.ConfigController - Sprache auf Deutsch geändert
+2024-12-29 19:38:47 INFO  org.example.view.ConfigController - Zmieniono język na polski
+2024-12-29 19:38:50 INFO  org.example.view.ConfigController - Zmieniono język na polski
+2024-12-29 19:38:52 INFO  org.example.view.ConfigController - Zmieniono język na polski
+2024-12-29 19:38:54 INFO  org.example.view.ConfigController - Zmieniono język na polski
+2024-12-29 19:43:56 INFO  org.example.view.ConfigController - Wyświetlono autorów
+2024-12-29 19:44:02 INFO  org.example.view.ConfigController - Wyświetlono licencję
+2024-12-29 19:44:05 INFO  org.example.view.ConfigController - Sprache auf Deutsch geändert
+2024-12-29 19:44:06 INFO  org.example.view.ConfigController - Autoren angezeigt
+2024-12-29 19:44:09 INFO  org.example.view.ConfigController - Lizenz angezeigt
+2024-12-29 19:52:58 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu planszy
+2024-12-29 19:54:47 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu planszy
+2024-12-29 19:55:24 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu planszy
+2024-12-29 19:56:00 INFO  org.example.view.ConfigController - Wczytano z pliku
+2024-12-29 19:56:24 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu planszy
+2024-12-29 19:57:55 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu planszy
+2024-12-29 19:59:10 INFO  org.example.view.ConfigController - Wczytano z pliku C:\Users\makky\Desktop\cos.golf
+2024-12-29 19:59:32 INFO  org.example.view.ConfigController - Sprache auf Deutsch geändert
+2024-12-29 19:59:39 INFO  org.example.view.ConfigController - geladen aus der Datei C:\Users\makky\Desktop\cos.golf
+2024-12-29 20:03:46 INFO  org.example.view.ConfigController - Wczytano z pliku C:\Users\makky\Desktop\cos.golf
+2024-12-29 20:22:53 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2024-12-29 20:22:58 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2024-12-29 20:22:59 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2024-12-29 20:23:00 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2024-12-29 20:23:01 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2024-12-29 20:23:01 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2024-12-29 20:23:02 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2024-12-29 20:23:02 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2024-12-29 20:23:02 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2024-12-29 20:23:03 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2024-12-29 20:23:03 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2024-12-29 20:23:03 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2024-12-29 20:23:03 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2024-12-29 20:23:45 INFO  org.example.view.ConfigController - Zapisano do pliku C:\Users\makky\Desktop\x.golf
+2024-12-29 20:23:51 INFO  org.example.view.ConfigController - Skonwertowano na bloki
+2024-12-29 20:23:54 INFO  org.example.view.ConfigController - Skonwertowano na 0/1
+2024-12-29 20:23:58 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 20:24:00 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 20:24:01 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2024-12-29 20:24:01 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji

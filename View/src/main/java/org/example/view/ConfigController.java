@@ -14,6 +14,8 @@ import org.example.model.GameOfLifeBoard;
 import java.io.File;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ConfigController {
 
@@ -62,6 +64,8 @@ public class ConfigController {
     @FXML
     private MenuItem deItem;
 
+    private static final Logger logger = LoggerFactory.getLogger(ConfigController.class);
+
     private GameOfLifeBoard golb;
     private ResourceBundle resourceBundle;
     private ResourceBundle authorsResourceBundle;
@@ -93,20 +97,24 @@ public class ConfigController {
         polItem.setOnAction(event -> {
             loadResourceBundle("pl");
             updateUI();
+            logger.info(resourceBundle.getString("action.langChanged"));
         });
 
         deItem.setOnAction(event -> {
             loadResourceBundle("de");
             updateUI();
+            logger.info(resourceBundle.getString("action.langChanged"));
         });
 
         authorsItem.setOnAction(event -> {
             String msg = authorsResourceBundle.getString("author1") + "\n" + authorsResourceBundle.getString("author2");
             messageWindow(msg);
+            logger.info(resourceBundle.getString("action.authorsShowed"));
         });
 
         licenseItem.setOnAction(event -> {
             messageWindow("Eclipse Public License - v 2.0");
+            logger.info(resourceBundle.getString("action.licenseShowed"));
         });
 
         menuBar.getMenus().clear();
@@ -146,6 +154,7 @@ public class ConfigController {
 
             golb = new GameOfLifeBoard(densityChoiceBox.getValue().randomFill(gridSizeX, gridSizeY));
             SimulationController.openSimulationWindow(golb, currentLanguage);
+            logger.info(resourceBundle.getString("action.simulationStarted"));
         });
 
         openFileButton.setOnAction(event -> {
@@ -154,14 +163,13 @@ public class ConfigController {
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Game of Life Files", "*.golf"));
             File file = fileChooser.showOpenDialog(primaryStage);
 
-            if (file != null) {
-                try (FileGameOfLifeBoardDao dao = new FileGameOfLifeBoardDao(file.getAbsolutePath())) {
-                    golb = dao.read();
-                    primaryStage.close();
-                    SimulationController.openSimulationWindow(golb, currentLanguage);
-                } catch (Exception e) {
-                    errorMessageWindow(resourceBundle.getString("error.fileRead"));
-                }
+            try (FileGameOfLifeBoardDao dao = new FileGameOfLifeBoardDao(file.getAbsolutePath())) {
+                golb = dao.read();
+                primaryStage.close();
+                SimulationController.openSimulationWindow(golb, currentLanguage);
+                logger.info(resourceBundle.getString("action.loadedFromFile") + " " + file.getAbsolutePath());
+            } catch (Exception e) {
+                errorMessageWindow(resourceBundle.getString("error.fileRead"));
             }
         });
     }
@@ -184,6 +192,7 @@ public class ConfigController {
     }
 
     private void errorMessageWindow(String errMess) {
+        logger.error(errMess);
         Stage window = new Stage();
         window.setTitle(resourceBundle.getString("app.errorTitle"));
 
@@ -212,4 +221,5 @@ public class ConfigController {
         window.setScene(newScene);
         window.show();
     }
+
 }

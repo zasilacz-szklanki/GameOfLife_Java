@@ -15,8 +15,12 @@ import org.example.model.*;
 import java.io.File;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SimulationController {
+
+    private static final Logger logger = LoggerFactory.getLogger(ConfigController.class);
 
     private static ResourceBundle resourceBundle;
 
@@ -63,6 +67,7 @@ public class SimulationController {
                     boolean newState = !currentState;
 
                     golb.set(finalRow, finalCol, newState);
+                    logger.info(resourceBundle.getString("action.stateChanged") + " " + newState);
 
                     if (isColorMode[0]) {
                         label[finalRow][finalCol].setText(converter.toBlock(newState));
@@ -81,10 +86,10 @@ public class SimulationController {
         final Menu convertMenu = new Menu(resourceBundle.getString("menu.convert"));
         final Menu fileMenu = new Menu(resourceBundle.getString("menu.file"));
 
-        MenuItem convertToColorsItem = new MenuItem(resourceBundle.getString("menu.item.convertToColors"));
+        MenuItem convertToBlocksItem = new MenuItem(resourceBundle.getString("menu.item.convertToBlocks"));
         MenuItem convertToNumbersItem = new MenuItem(resourceBundle.getString("menu.item.convertToNumbers"));
 
-        convertToColorsItem.setOnAction(event -> {
+        convertToBlocksItem.setOnAction(event -> {
             isColorMode[0] = true;
             for (int row = 0; row < golb.getBoard().size(); row++) {
                 for (int col = 0; col < golb.getBoard().get(row).size(); col++) {
@@ -93,6 +98,7 @@ public class SimulationController {
                     label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
                 }
             }
+            logger.info(resourceBundle.getString("action.convertedToBlocks"));
         });
 
         convertToNumbersItem.setOnAction(event -> {
@@ -104,6 +110,7 @@ public class SimulationController {
                     label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
                 }
             }
+            logger.info(resourceBundle.getString("action.convertedTo01"));
         });
 
         MenuItem saveToFileItem = new MenuItem(resourceBundle.getString("menu.item.saveToFile"));
@@ -112,16 +119,15 @@ public class SimulationController {
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Game of Life Files", "*.golf"));
             File file = fileChooser.showSaveDialog(newWindow);
 
-            if (file != null) {
-                try (Dao<GameOfLifeBoard> dao = GameOfLifeBoardDaoFactory.getFileDao(file.getAbsolutePath())) {
-                    dao.write(golb);
-                } catch (Exception e) {
-                    System.out.println(resourceBundle.getString("error.fileWrite"));
-                }
+            try (Dao<GameOfLifeBoard> dao = GameOfLifeBoardDaoFactory.getFileDao(file.getAbsolutePath())) {
+                dao.write(golb);
+                logger.info(resourceBundle.getString("action.savedToFile") + " " + file.getAbsolutePath());
+            } catch (Exception e) {
+                System.out.println(resourceBundle.getString("error.fileWrite"));
             }
         });
 
-        convertMenu.getItems().addAll(convertToColorsItem, convertToNumbersItem);
+        convertMenu.getItems().addAll(convertToBlocksItem, convertToNumbersItem);
         menuBar.getMenus().addAll(convertMenu);
         fileMenu.getItems().addAll(saveToFileItem);
         menuBar.getMenus().addAll(fileMenu);
@@ -143,6 +149,7 @@ public class SimulationController {
                     }
                 }
             }
+            logger.info(resourceBundle.getString("action.nextStep"));
         });
 
 
