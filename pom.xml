@@ -145,7 +145,7 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.example.View/org.example.view.GolApplication</mainClass>
+                            <mainClass>org.example.View/org.example.view.GameOfLifeApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

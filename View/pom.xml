@@ -42,7 +42,7 @@
                             <goal>run</goal>
                         </goals>
                         <configuration>
-                            <mainClass>org.example.view.GolApplication</mainClass>
+                            <mainClass>org.example.view.GameOfLifeApplication</mainClass>
                         </configuration>
                     </execution>
                 </executions>

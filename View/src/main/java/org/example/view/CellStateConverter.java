@@ -3,6 +3,8 @@ package org.example.view;
 import javafx.util.StringConverter;
 
 public class CellStateConverter extends StringConverter<Boolean> {
+    private static final String FULL_BLOCK = "█";
+
     @Override
     public String toString(Boolean object) {
         return object ? "1" : "0";
@@ -17,7 +19,7 @@ public class CellStateConverter extends StringConverter<Boolean> {
         return object ? "#00ff00" : "#777777";
     }
 
-    public Boolean fromColor(String color) {
-        return "#00ff00".equalsIgnoreCase(color);
+    public String toBlock(Boolean object) {
+        return FULL_BLOCK;
     }
 }

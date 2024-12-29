@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.view.ConfigController" prefWidth="300" prefHeight="400">
+    <top>
+        <MenuBar fx:id="menuBar">
+            <menus>
+                <Menu fx:id="langMenu">
+                    <items>
+                        <MenuItem fx:id="polItem" />
+                        <MenuItem fx:id="deItem" />
+                    </items>
+                </Menu>
+                <Menu fx:id="infoMenu">
+                    <items>
+                        <MenuItem fx:id="authorsItem" />
+                        <MenuItem fx:id="licenseItem" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="gridSizeXLabel">
+                    <VBox.margin>
+                        <Insets top="20" left="20" right="20" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="gridSizeXField">
+                    <VBox.margin>
+                        <Insets left="20" right="20" />
+                    </VBox.margin>
+                </TextField>
+                <Label fx:id="gridSizeYLabel">
+                    <VBox.margin>
+                        <Insets left="20" right="20" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="gridSizeYField">
+                    <VBox.margin>
+                        <Insets left="20" right="20" />
+                    </VBox.margin>
+                </TextField>
+                <Label fx:id="densityLabel">
+                    <VBox.margin>
+                        <Insets left="20" right="20" />
+                    </VBox.margin>
+                </Label>
+                <ChoiceBox fx:id="densityChoiceBox">
+                    <VBox.margin>
+                        <Insets left="20" right="20" />
+                    </VBox.margin>
+                </ChoiceBox>
+                <Button fx:id="startButton">
+                    <VBox.margin>
+                        <Insets top="20" left="20" right="20" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="openFileButton">
+                    <VBox.margin>
+                        <Insets top="20" left="20" right="20" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
