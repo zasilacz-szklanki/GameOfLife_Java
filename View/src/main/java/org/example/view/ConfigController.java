@@ -4,9 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import org.example.model.Density;
-import org.example.model.FileGameOfLifeBoardDao;
-import org.example.model.GameOfLifeBoard;
+import org.example.model.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -86,14 +84,14 @@ public class ConfigController {
         return a;
     }
 
-    private void writeToFile(File file, Stage primaryStage) throws MyException {
+    private void writeToFile(File file, Stage primaryStage) throws FileException {
         try (FileGameOfLifeBoardDao dao = new FileGameOfLifeBoardDao(file.getAbsolutePath())) {
             golb = dao.read();
             primaryStage.close();
             SimulationController.openSimulationWindow(golb, currentLanguage);
             logger.info(resourceBundle.getString("action.loadedFromFile") + " " + file.getAbsolutePath());
         } catch (Exception e) {
-            throw new MyException();
+            throw new FileException();
         }
     }
 
@@ -190,7 +188,7 @@ public class ConfigController {
 
             try {
                 writeToFile(file, primaryStage);
-            } catch (MyException e) {
+            } catch (FileException e) {
                 MessageWindow.errorMessageWindow(resourceBundle.getString("error.fileRead"),
                         resourceBundle.getString("app.errorTitle"));
             }

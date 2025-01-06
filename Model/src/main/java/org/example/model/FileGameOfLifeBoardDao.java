@@ -1,10 +1,6 @@
 package org.example.model;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +15,7 @@ public class FileGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
     }
 
     @Override
-    public GameOfLifeBoard read() {
+    public GameOfLifeBoard read() throws FileException {
         List<int[]> rows = new ArrayList<>();
         try {
             br = new BufferedReader(new FileReader(fileName));
@@ -33,7 +29,7 @@ public class FileGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
                 rows.add(row);
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new FileException();
         }
         GameOfLifeBoard board = new GameOfLifeBoard(rows.size(), rows.getFirst().length);
         for (int i = 0; i < rows.size(); i++) {
@@ -45,7 +41,7 @@ public class FileGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
     }
 
     @Override
-    public void write(GameOfLifeBoard obj) {
+    public void write(GameOfLifeBoard obj) throws FileException {
         List<List<GameOfLifeCell>> board = obj.getBoard();
         try {
             bw = new BufferedWriter(new FileWriter(fileName));
@@ -59,12 +55,12 @@ public class FileGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
                 bw.newLine();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new FileException();
         }
     }
 
     @Override
-    public void close() {
+    public void close() throws FileException {
         try {
             if (br != null) {
                 br.close();
@@ -73,7 +69,7 @@ public class FileGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
                 bw.close();
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new FileException();
         }
     }
 }

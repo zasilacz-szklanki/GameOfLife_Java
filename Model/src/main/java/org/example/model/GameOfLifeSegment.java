@@ -122,7 +122,7 @@ public abstract class GameOfLifeSegment implements Observer<GameOfLifeCell>, Clo
     }
 
     @Override
-    public GameOfLifeSegment clone() {
+    public GameOfLifeSegment clone() throws CloneException {
         try {
             GameOfLifeSegment cloned = (GameOfLifeSegment) super.clone();
             List<GameOfLifeCell> tmpSegment = new ArrayList<>(this.segment.size());
@@ -132,7 +132,7 @@ public abstract class GameOfLifeSegment implements Observer<GameOfLifeCell>, Clo
             cloned.segment = tmpSegment;
             return cloned;
         } catch (CloneNotSupportedException e) {
-            throw new AssertionError(e);
+            throw new CloneException(e);
         }
     }
 }

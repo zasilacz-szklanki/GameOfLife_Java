@@ -127,7 +127,7 @@ public class GameOfLifeCell implements Cloneable, Comparable<GameOfLifeCell> {
     }
 
     @Override
-    public GameOfLifeCell clone() {
+    public GameOfLifeCell clone() throws CloneException {
         try {
             GameOfLifeCell cloned = (GameOfLifeCell) super.clone();
             cloned.neighbours = new GameOfLifeCell[8];
@@ -135,7 +135,7 @@ public class GameOfLifeCell implements Cloneable, Comparable<GameOfLifeCell> {
             cloned.observers = new ObservatorsManagement<>();
             return cloned;
         } catch (CloneNotSupportedException e) {
-            throw new AssertionError(e);
+            throw new CloneException(e);
         }
     }
 

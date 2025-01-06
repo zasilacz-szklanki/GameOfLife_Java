@@ -7,9 +7,14 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 public class PlainGameOfLifeSimulator implements GameOfLifeSimulator {
     @Override
-    public void doStep(GameOfLifeBoard board) {
+    public void doStep(GameOfLifeBoard board) throws DoStepException {
 
-        GameOfLifeBoard next = board.clone();
+        GameOfLifeBoard next;
+        try {
+            next = board.clone();
+        } catch (CloneException e) {
+            throw new DoStepException();
+        }
 
         for (int i = 0; i < next.getBoard().size(); i++) {
             for (int j = 0; j < next.getBoard().get(i).size(); j++) {

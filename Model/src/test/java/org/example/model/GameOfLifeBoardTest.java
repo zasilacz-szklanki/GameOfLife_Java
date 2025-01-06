@@ -164,8 +164,22 @@ class GameOfLifeBoardTest {
     @Test
     void test9() {
         GameOfLifeBoard board = new GameOfLifeBoard(5, 5);
+        GameOfLifeBoard b = null;
         GameOfLifeCell cell = board.getBoard().get(1).get(1);
-        assert(board.equals(board.clone()));
-        assert(cell.equals(cell.clone()));
+        GameOfLifeCell c = null;
+
+        try {
+            b=board.clone();
+        } catch (CloneException e) {
+            assert(false);
+        }
+        assert(board.equals(b));
+
+        try {
+            c=cell.clone();
+        } catch (CloneException e) {
+            assert(false);
+        }
+        assert(cell.equals(c));
     }
 }

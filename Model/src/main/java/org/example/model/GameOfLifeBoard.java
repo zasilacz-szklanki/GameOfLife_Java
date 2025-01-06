@@ -83,7 +83,7 @@ public class GameOfLifeBoard implements Serializable, Cloneable {
         return new GameOfLifeRow(board, index);
     }
 
-    public void doSimulationStep(GameOfLifeSimulator simulation) {
+    public void doSimulationStep(GameOfLifeSimulator simulation) throws DoStepException {
         simulation.doStep(this);
     }
 
@@ -118,7 +118,7 @@ public class GameOfLifeBoard implements Serializable, Cloneable {
     }
 
     @Override
-    public GameOfLifeBoard clone() {
+    public GameOfLifeBoard clone() throws CloneException {
         try {
             GameOfLifeBoard copied = (GameOfLifeBoard) super.clone();
             List<List<GameOfLifeCell>> tmpBoard = new ArrayList<>();
@@ -132,7 +132,7 @@ public class GameOfLifeBoard implements Serializable, Cloneable {
             copied.board = Collections.unmodifiableList(tmpBoard);
             return copied;
         } catch (CloneNotSupportedException e) {
-            throw new AssertionError(e);
+            throw new CloneException(e);
         }
     }
 }

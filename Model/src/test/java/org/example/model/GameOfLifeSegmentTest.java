@@ -43,7 +43,11 @@ class GameOfLifeSegmentTest {
         assert (col.getSegment().get(2).getCellValue() == board.get(2, 2));
         assert (row.getSegment().get(2).getCellValue() == board.get(2, 2));
 
-        board.doSimulationStep(simulator);
+        try {
+            board.doSimulationStep(simulator);
+        } catch (DoStepException e) {
+            assert(false);
+        }
 
         assert (col.getSegment().get(2).getCellValue() == board.get(2, 2));
         assert (row.getSegment().get(2).getCellValue() == board.get(2, 2));
@@ -83,8 +87,22 @@ class GameOfLifeSegmentTest {
     void test4() {
         GameOfLifeBoard board = new GameOfLifeBoard(5, 5);
         GameOfLifeColumn column = board.getColumn(1);
+        GameOfLifeColumn c = null;
         GameOfLifeRow row = board.getRow(1);
-        assert(column.equals(column.clone()));
-        assert(row.equals(row.clone()));
+        GameOfLifeRow r = null;
+
+        try {
+            c = (GameOfLifeColumn) column.clone();
+        } catch (CloneException e) {
+            assert(false);
+        }
+        assert(column.equals(c));
+
+        try {
+            r = (GameOfLifeRow) row.clone();
+        } catch (CloneException e) {
+            assert(false);
+        }
+        assert(row.equals(r));
     }
 }

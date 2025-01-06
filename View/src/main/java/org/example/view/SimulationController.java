@@ -29,12 +29,12 @@ public class SimulationController {
         resourceBundle = ResourceBundle.getBundle("org.example.view.lang", new Locale(language));
     }
 
-    private static void saveToFile(File file, GameOfLifeBoard golb) throws MyException {
+    private static void saveToFile(File file, GameOfLifeBoard golb) throws FileException {
         try (Dao<GameOfLifeBoard> dao = GameOfLifeBoardDaoFactory.getFileDao(file.getAbsolutePath())) {
             dao.write(golb);
             logger.info(resourceBundle.getString("action.savedToFile") + " " + file.getAbsolutePath());
         } catch (Exception e) {
-            throw new MyException();
+            throw new FileException();
         }
     }
 
@@ -131,7 +131,7 @@ public class SimulationController {
 
             try {
                 saveToFile(file,golb);
-            } catch (MyException e) {
+            } catch (FileException e) {
                 MessageWindow.errorMessageWindow(resourceBundle.getString("error.fileWrite"),
                         resourceBundle.getString("app.errorTitle"));
             }
@@ -146,7 +146,14 @@ public class SimulationController {
         nextStepButton.setFont(Font.font("Courier New", 16));
         nextStepButton.setPrefWidth(Region.USE_COMPUTED_SIZE);
         nextStepButton.setOnAction(event -> {
-            golb.doSimulationStep(sim);
+            //golb.doSimulationStep(sim);
+            try {
+                golb.doSimulationStep(sim);
+            } catch (DoStepException e) {
+                //assert(false);
+                ///?????????
+                //TODO co tu?
+            }
             for (int row = 0; row < golb.getBoard().size(); row++) {
                 for (int col = 0; col < golb.getBoard().get(row).size(); col++) {
                     boolean cellValue = golb.get(row, col);
