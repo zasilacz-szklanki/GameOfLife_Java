@@ -1,5 +1,7 @@
 package org.example.view;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -8,6 +10,7 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import org.example.model.*;
 import org.kordamp.ikonli.javafx.FontIcon;
 import org.kordamp.ikonli.material.Material;
@@ -216,6 +219,37 @@ public class SimulationController {
         Button stopButton = new Button();
         FontIcon stopIcon = new FontIcon(Material.PAUSE);
         stopButton.setGraphic(stopIcon);
+
+        Timeline simulationTimeline = new Timeline(new KeyFrame(Duration.seconds(0.1), event -> {
+            try {
+                golb.doSimulationStep(sim);
+            } catch (DoStepException e) {
+                // throw new RuntimeException(e);
+            }
+            for (int row = 0; row < golb.getBoard().size(); row++) {
+                for (int col = 0; col < golb.getBoard().get(row).size(); col++) {
+                    boolean cellValue = golb.get(row, col);
+                    if (isColorMode[0]) {
+                        label[row][col].setText(converter.toBlock(cellValue));
+                        label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
+                    } else {
+                        label[row][col].setText(converter.toString(cellValue));
+                        label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
+                    }
+                }
+            }
+        }));
+        simulationTimeline.setCycleCount(Timeline.INDEFINITE);
+
+        playButton.setOnAction(event -> {
+            simulationTimeline.play();
+            logger.info(resourceBundle.getString("action.autoSimulationStarted"));
+        });
+
+        stopButton.setOnAction(event -> {
+            simulationTimeline.stop();
+            logger.info(resourceBundle.getString("action.autoSimulationStopped"));
+        });
 
         HBox boxPlayStop = new HBox(10);
         boxPlayStop.getChildren().addAll(playButton, stopButton);

@@ -2544,3 +2544,609 @@ Maciej Miazek
 2025-01-07 04:02:22 INFO  org.example.view.ConfigController - Skonwertowano na 0/1
 2025-01-07 04:02:24 INFO  org.example.view.ConfigController - Wyczyszczono planszę
 2025-01-07 04:02:28 INFO  org.example.view.ConfigController - Skonwertowano na bloki
+2025-01-07 11:13:25 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 11:13:26 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:13:27 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:13:36 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:13:37 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:13:40 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:13:41 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:13:41 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:13:41 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:13:42 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:13:42 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:13:42 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:13:42 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:20:53 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 11:20:55 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:20:55 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:00 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:01 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:02 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:03 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:05 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:05 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:15 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:16 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:17 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:18 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:19 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:24 INFO  org.example.view.ConfigController - Skonwertowano na 0/1
+2025-01-07 11:21:46 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 11:21:47 INFO  org.example.view.ConfigController - Skonwertowano na 0/1
+2025-01-07 11:21:56 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:57 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:57 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:58 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:21:58 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:22:00 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:22:00 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:22:01 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:22:01 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:22:01 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:22:03 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:22:03 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:22:04 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:22:04 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:22:04 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:25:13 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 11:25:15 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:15 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:15 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:15 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:15 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:16 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:16 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:16 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:16 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:16 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:16 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:16 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:16 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:16 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:16 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:17 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:17 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:17 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:17 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:17 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:17 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:17 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:17 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:17 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:17 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:18 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:18 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:18 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:18 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:18 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:18 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:18 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:18 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:18 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:18 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:19 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:19 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:19 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:19 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:19 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:19 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:19 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:19 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:19 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:19 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:20 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:20 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:20 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:20 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:20 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:20 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:20 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:20 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:20 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:20 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:21 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:21 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:21 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:21 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:21 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:21 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:21 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:21 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:21 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:21 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:22 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:22 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:22 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:22 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:25:24 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:27:22 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 11:27:24 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:24 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:24 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:24 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:24 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:24 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:24 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:25 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:26 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:26 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:26 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:26 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:26 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:26 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:26 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:26 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:26 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:27 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:27 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:27 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:27 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:27 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:27 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:27 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:27 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:27 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:28 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:28 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:28 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:28 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:28 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:29 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:27:30 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:27:30 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:27:30 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:27:31 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:31 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:31 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:31 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:31 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:31 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:32 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:32 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:32 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:32 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:32 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:32 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:32 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:32 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:32 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:32 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:33 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:33 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:33 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:33 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:33 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:33 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:33 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:33 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:33 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:33 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:34 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:34 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:34 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:34 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:34 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:34 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:34 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:34 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:34 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:34 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:35 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:35 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:35 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:35 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:35 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:35 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:35 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:35 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:35 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:35 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:36 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:36 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:36 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:36 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:36 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:36 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:36 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:36 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:36 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:36 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:37 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:37 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:37 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:37 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:37 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:37 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:37 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:37 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:37 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:37 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:38 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:38 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:38 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:38 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:38 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:38 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:38 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:38 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:38 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:38 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:39 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:39 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:39 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:39 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:39 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:39 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:39 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:39 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:39 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:39 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:40 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:40 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:40 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:40 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:40 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:40 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:40 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:40 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:40 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:40 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:41 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:41 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:41 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:41 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:41 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:41 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:41 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:41 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:41 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:41 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:42 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:42 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:42 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:42 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:42 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:42 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:42 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:42 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:42 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:42 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:43 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:43 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:43 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:43 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:43 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:43 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:43 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:43 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:43 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:43 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:44 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:44 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:44 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:44 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:44 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:44 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:44 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:44 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:44 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:44 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:45 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:45 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:45 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:45 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:45 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:45 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:45 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:45 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:27:45 INFO  org.example.view.ConfigController - Krok
+2025-01-07 11:35:53 INFO  org.example.view.ConfigController - Sprache auf Deutsch geändert
+2025-01-07 11:35:54 INFO  org.example.view.ConfigController - Zmieniono język na polski
+2025-01-07 11:36:13 INFO  org.example.view.ConfigController - Wyświetlono autorów
+2025-01-07 11:36:15 INFO  org.example.view.ConfigController - Wyświetlono licencję
+2025-01-07 11:36:19 INFO  org.example.view.ConfigController - Sprache auf Deutsch geändert
+2025-01-07 11:36:20 INFO  org.example.view.ConfigController - Autoren angezeigt
+2025-01-07 11:36:36 INFO  org.example.view.ConfigController - Zmieniono język na polski
+2025-01-07 11:36:38 INFO  org.example.view.ConfigController - Wyświetlono licencję
+2025-01-07 11:36:50 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu planszy z pliku
+2025-01-07 11:37:04 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 11:37:09 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 11:37:11 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:37:12 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:37:13 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:37:14 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:37:15 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:37:15 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:37:16 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:37:22 INFO  org.example.view.ConfigController - Skonwertowano na 0/1
+2025-01-07 11:37:24 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:37:26 INFO  org.example.view.ConfigController - Skonwertowano na bloki
+2025-01-07 11:37:27 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:37:27 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:37:28 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:37:28 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:37:34 ERROR org.example.view.ConfigController - Błąd przy zapisywaniu planszy do pliku
+2025-01-07 11:37:40 INFO  org.example.view.ConfigController - Zapisano w bazie danych: efsnfnen;le
+2025-01-07 11:37:56 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:37:57 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 11:38:08 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 11:38:10 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:38:10 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 11:38:12 INFO  org.example.view.ConfigController - Wyczyszczono planszę
+2025-01-07 11:38:54 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:38:54 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:38:55 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:38:55 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:38:59 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:38:59 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:00 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:00 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:05 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:05 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:06 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:06 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:06 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:08 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:11 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:12 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:12 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:12 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:24 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:24 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:25 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:25 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:26 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:26 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:27 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:27 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:32 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:32 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:34 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:35 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:39:37 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:39 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:40 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:42 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:42 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:44 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:47 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:47 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:53 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:54 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:57 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:58 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:58 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:39:58 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:00 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:03 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:06 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:06 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:08 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:09 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:10 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:11 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:11 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:11 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:22 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:23 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:40:31 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:32 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:32 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:32 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:40:36 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 11:42:18 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 11:42:22 INFO  org.example.view.ConfigController - Wyczyszczono planszę
+2025-01-07 11:42:24 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:26 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:27 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:30 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:42:33 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:34 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:34 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:35 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:36 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:36 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:37 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:37 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:38 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:39 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:40 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:41 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:41 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:42 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:42 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:44 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:44 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:46 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:46 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:47 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:48 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:49 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:42:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:51 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:52 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:53 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:54 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:55 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:56 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:57 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:42:59 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:01 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:02 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:02 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:05 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:06 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:06 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:09 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:10 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:11 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:12 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:14 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:15 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:15 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:15 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:17 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:43:18 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:18 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:18 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:19 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:43:20 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:21 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:21 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:22 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:43:23 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:23 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:24 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:27 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:27 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:28 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:29 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:30 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:31 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:34 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:43:35 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:37 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:37 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:39 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:43:40 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:43:42 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:43:42 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:43:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:47 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:47 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:47 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:48 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:51 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:52 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:52 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:53 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:53 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:53 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:56 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:56 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:56 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:57 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:57 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:58 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:43:59 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:00 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:01 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:02 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:03 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:07 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:08 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:09 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:10 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:11 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:11 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:13 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:15 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:15 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:16 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:19 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:20 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:23 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:24 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:33 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:35 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:44:38 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 11:44:44 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 11:44:45 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:46 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:44:47 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:48 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:48 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:44:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:50 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:44:53 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:54 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:55 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:56 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:57 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:58 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:58 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:59 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:44:59 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:00 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:01 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:02 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:03 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:05 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:07 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:08 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:09 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:09 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:09 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:10 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:11 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:12 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:12 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:12 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:14 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:16 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:17 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:45:18 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:20 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:21 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:24 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:24 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:25 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:26 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:26 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:27 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:28 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:45:28 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:28 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:31 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:32 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:34 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:36 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:36 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:37 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:37 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:39 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:40 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:40 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:40 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:42 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:42 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:45 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:45 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:46 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:47 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 11:45:48 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:48 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:45:52 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 11:45:57 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 11:46:03 INFO  org.example.view.ConfigController - Wyczyszczono planszę
+2025-01-07 11:46:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 11:46:05 INFO  org.example.view.ConfigController - Zmieniono stan na false
