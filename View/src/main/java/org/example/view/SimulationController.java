@@ -18,9 +18,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
-
 
 public class SimulationController {
 
@@ -38,6 +38,37 @@ public class SimulationController {
             logger.info(resourceBundle.getString("action.savedToFile") + " " + file.getAbsolutePath());
         } catch (Exception e) {
             throw new FileException();
+        }
+    }
+
+    private static void saveToDb(String boardName, GameOfLifeBoard golb) throws DbWriteException {
+        try (Dao<GameOfLifeBoard> dao = GameOfLifeBoardDaoFactory.getDbDao(boardName)) {
+            dao.write(golb);
+            logger.info(resourceBundle.getString("action.savedInDb") + ": " + boardName);
+        } catch (Exception e) {
+            throw new DbWriteException();
+        }
+    }
+
+    private static void setBoardLabels(GameOfLifeBoard golb, PlainGameOfLifeSimulator sim, boolean[] isColorMode,
+                                       Label[][] label, CellStateConverter converter) {
+        try {
+            golb.doSimulationStep(sim);
+        } catch (DoStepException e) {
+            MessageWindow.errorMessageWindow(resourceBundle.getString("error.cannotDoStep"),
+                    resourceBundle.getString("app.errorTitle"));
+        }
+        for (int row = 0; row < golb.getBoard().size(); row++) {
+            for (int col = 0; col < golb.getBoard().get(row).size(); col++) {
+                boolean cellValue = golb.get(row, col);
+                if (isColorMode[0]) {
+                    label[row][col].setText(converter.toBlock(cellValue));
+                    label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
+                } else {
+                    label[row][col].setText(converter.toString(cellValue));
+                    label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
+                }
+            }
         }
     }
 
@@ -149,11 +180,29 @@ public class SimulationController {
                     resourceBundle.getString("app.dbTitle"));
 
             if (boardName == null) {
-                MessageWindow.errorMessageWindow(resourceBundle.getString("error.dbWrite"),
+                MessageWindow.errorMessageWindow(resourceBundle.getString("error.boardNotLoaded"),
                         resourceBundle.getString("app.errorTitle"));
             } else {
-                MessageWindow.messageWindow(boardName, resourceBundle.getString("app.messageTitle"));
-                logger.info(resourceBundle.getString("action.savedInDb") + ": " + boardName);
+                List<String> boardNames;
+                try (JdbcGameOfLifeBoardDao dao = new JdbcGameOfLifeBoardDao("jakasplansza");) {
+                    boardNames = dao.getBoardNames();
+                } catch (Exception e) {
+                    MessageWindow.errorMessageWindow(resourceBundle.getString("error.dbLoad"),
+                            resourceBundle.getString("app.errorTitle"));
+                    return;
+                }
+                if (boardNames.contains(boardName)) {
+                    MessageWindow.errorMessageWindow(resourceBundle.getString("error.nameAlreadyExists"),
+                            resourceBundle.getString("app.errorTitle"));
+                } else {
+                    try {
+                        saveToDb(boardName, golb);
+
+                    } catch (DbException e) {
+                        MessageWindow.errorMessageWindow(resourceBundle.getString("error.dbWrite"),
+                                resourceBundle.getString("app.errorTitle"));
+                    }
+                }
             }
         });
 
@@ -188,24 +237,7 @@ public class SimulationController {
         nextStepButton.setFont(Font.font("Courier New", 16));
         nextStepButton.setPrefWidth(Region.USE_COMPUTED_SIZE);
         nextStepButton.setOnAction(event -> {
-            try {
-                golb.doSimulationStep(sim);
-            } catch (DoStepException e) {
-                MessageWindow.errorMessageWindow(resourceBundle.getString("error.cannotDoStep"),
-                        resourceBundle.getString("app.errorTitle"));
-            }
-            for (int row = 0; row < golb.getBoard().size(); row++) {
-                for (int col = 0; col < golb.getBoard().get(row).size(); col++) {
-                    boolean cellValue = golb.get(row, col);
-                    if (isColorMode[0]) {
-                        label[row][col].setText(converter.toBlock(cellValue));
-                        label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
-                    } else {
-                        label[row][col].setText(converter.toString(cellValue));
-                        label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
-                    }
-                }
-            }
+            setBoardLabels(golb, sim, isColorMode, label, converter);
             logger.info(resourceBundle.getString("action.nextStep"));
         });
 
@@ -218,24 +250,7 @@ public class SimulationController {
         stopButton.setGraphic(stopIcon);
 
         Timeline simulationTimeline = new Timeline(new KeyFrame(Duration.seconds(0.1), event -> {
-            try {
-                golb.doSimulationStep(sim);
-            } catch (DoStepException e) {
-                MessageWindow.errorMessageWindow(resourceBundle.getString("error.cannotDoStep"),
-                        resourceBundle.getString("app.errorTitle"));
-            }
-            for (int row = 0; row < golb.getBoard().size(); row++) {
-                for (int col = 0; col < golb.getBoard().get(row).size(); col++) {
-                    boolean cellValue = golb.get(row, col);
-                    if (isColorMode[0]) {
-                        label[row][col].setText(converter.toBlock(cellValue));
-                        label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
-                    } else {
-                        label[row][col].setText(converter.toString(cellValue));
-                        label[row][col].setStyle("-fx-text-fill: " + converter.toColor(cellValue) + ";");
-                    }
-                }
-            }
+            setBoardLabels(golb, sim, isColorMode, label, converter);
         }));
         simulationTimeline.setCycleCount(Timeline.INDEFINITE);
 
@@ -270,24 +285,12 @@ public class SimulationController {
         int padding = 30;
         double windowWidth = gridSizeY * 12 + padding;
         double windowHeight = gridSizeX * 20 + padding + 100;
+        double minWidth = 300;
+        double minHeight = 400;
         Scene newScene = new Scene(layout, windowWidth, windowHeight);
+        newWindow.setMinWidth(minWidth);
+        newWindow.setMinHeight(minHeight);
         newWindow.setScene(newScene);
         newWindow.show();
-
-        //        HBox bottomBox = new HBox(nextStepButton);
-        //        bottomBox.setAlignment(Pos.CENTER);
-        //
-        //        BorderPane layout = new BorderPane();
-        //        layout.setTop(menuBar);
-        //        layout.setCenter(gridPane);
-        //        layout.setBottom(bottomBox);
-        //        layout.setStyle("-fx-background-color: #000057;");
-        //
-        //        int padding = 30;
-        //        double windowWidth = gridSizeY * 12 + padding;
-        //        double windowHeight = gridSizeX * 20 + padding + 100;
-        //        Scene newScene = new Scene(layout, windowWidth, windowHeight);
-        //        newWindow.setScene(newScene);
-        //        newWindow.show();
     }
 }

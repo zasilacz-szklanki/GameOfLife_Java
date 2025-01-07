@@ -9,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.sql.*;
 import java.util.*;
 
 public class ConfigController {
@@ -87,7 +86,7 @@ public class ConfigController {
         return a;
     }
 
-    private void writeToFile(File file, Stage primaryStage) throws FileException {
+    private void readFromFile(File file, Stage primaryStage) throws FileException {
         try (FileGameOfLifeBoardDao dao = new FileGameOfLifeBoardDao(file.getAbsolutePath())) {
             golb = dao.read();
             primaryStage.close();
@@ -98,9 +97,21 @@ public class ConfigController {
         }
     }
 
+    private void readFromDb(String boardName, Stage primaryStage) throws DbException {
+        try (Dao<GameOfLifeBoard> dao = GameOfLifeBoardDaoFactory.getDbDao(boardName)) {
+            golb = dao.read();
+            primaryStage.close();
+            logger.info(resourceBundle.getString("action.loadedFromDb") + ": " + boardName);
+        } catch (Exception e) {
+            throw new DbReadException();
+        }
+    }
+
     @FXML
     public void initialize() {
         loadResourceBundle(currentLanguage);
+
+        logger.info(resourceBundle.getString("action.appStarted"));
 
         gridSizeXField.setTextFormatter(new TextFormatter<>(
                 change -> change.getControlNewText().matches("\\d*") ? change : null
@@ -185,12 +196,13 @@ public class ConfigController {
 
         openFileButton.setOnAction(event -> {
             Stage primaryStage = (Stage) openFileButton.getScene().getWindow();
+
             FileChooser fileChooser = new FileChooser();
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Game of Life Files", "*.golf"));
             File file = fileChooser.showOpenDialog(primaryStage);
 
             try {
-                writeToFile(file, primaryStage);
+                readFromFile(file, primaryStage);
             } catch (FileException e) {
                 MessageWindow.errorMessageWindow(resourceBundle.getString("error.fileRead"),
                         resourceBundle.getString("app.errorTitle"));
@@ -198,26 +210,15 @@ public class ConfigController {
         });
 
         openDbButton.setOnAction(event -> {
+            Stage primaryStage = (Stage) openDbButton.getScene().getWindow();
 
             List<String> boardNames = new ArrayList<>();
-            boardNames.add("p1");
-            boardNames.add("p2");
-            boardNames.add("p3");
-
-            /*
-            boardNames = loadDatabase();
-
-            try (JdbcGameOfLifeBoardDao dao = new JdbcGameOfLifeBoardDao("p1")) {
-
-                //boardNames = dao.getBoardNames();
-               System.out.println(dao.read());
+            try (JdbcGameOfLifeBoardDao dao = new JdbcGameOfLifeBoardDao("jakasplansza");) {
+                boardNames = dao.getBoardNames();
             } catch (Exception e) {
                 MessageWindow.errorMessageWindow(resourceBundle.getString("error.dbLoad"),
                         resourceBundle.getString("app.errorTitle"));
-                System.out.println(e.getMessage());
-                return;
             }
-            */
 
             String boardName = MessageWindow.boardNameChooseWindow(boardNames,
                     resourceBundle.getString("button.openDb"),
@@ -227,8 +228,13 @@ public class ConfigController {
                 MessageWindow.errorMessageWindow(resourceBundle.getString("error.boardNotLoaded"),
                         resourceBundle.getString("app.errorTitle"));
             } else {
-                MessageWindow.messageWindow(boardName, resourceBundle.getString("app.messageTitle"));
-                logger.info(resourceBundle.getString("action.loadedFromDb") + ": " + boardName);
+                try {
+                    readFromDb(boardName, primaryStage);
+                    SimulationController.openSimulationWindow(golb, currentLanguage);
+                } catch (Exception e) {
+                    MessageWindow.errorMessageWindow(resourceBundle.getString("error.dbRead"),
+                            resourceBundle.getString("app.errorTitle"));
+                }
             }
         });
     }
@@ -250,37 +256,4 @@ public class ConfigController {
         polItem.setText(resourceBundle.getString("menu.item.lang.polish"));
         deItem.setText(resourceBundle.getString("menu.item.lang.german"));
     }
-
-    //    public static void main(String[] args) {
-    //        boolean write = !true;
-    //        boolean[][] init = {
-    //                {false, false},
-    //                {false, true},
-    //                {true, false},
-    //        };
-    //
-    //
-    //        /*JdbcGameOfLifeBoardDao dao = new JdbcGameOfLifeBoardDao("PlanszaTestowa");//Kim był Testow?
-    //        try {
-    //            dao.createTables();
-    //        } catch (DbException e) {
-    //            System.err.println(e.getMessage());
-    //        }*/
-    //
-    //
-    //
-    //        try (JdbcGameOfLifeBoardDao dao = new JdbcGameOfLifeBoardDao("jakasplansza")) {
-    //            if (write) {
-    //                //GameOfLifeBoard board = new GameOfLifeBoard(init);
-    //                //dao.write(board);
-    //                GameOfLifeBoard board = new GameOfLifeBoard(5, 8);
-    //                dao.write(board);
-    //            } else {
-    //                GameOfLifeBoard board = dao.read();
-    //                System.out.println(dao.getBoardNames());
-    //            }
-    //        } catch (Exception e) {
-    //            // System.out.println(e.getMessage());
-    //        }
-    //    }
 }

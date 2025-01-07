@@ -3205,3 +3205,505 @@ Maciej Miazek
 2025-01-07 15:52:53 INFO  org.example.view.ConfigController - Skonwertowano na bloki
 2025-01-07 15:52:58 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
 2025-01-07 15:57:36 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 16:21:42 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 16:36:46 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 16:37:31 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 16:38:08 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 16:39:00 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 16:40:55 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 16:41:31 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 16:44:44 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 16:45:54 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 16:46:11 INFO  org.example.view.ConfigController - Wczytano z bazy danych: p2                              
+2025-01-07 16:47:51 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 16:48:29 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 16:51:49 INFO  org.example.view.ConfigController - Wczytano z bazy danych: p2                              
+2025-01-07 16:52:33 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:04:27 INFO  org.example.view.ConfigController - Wczytano z bazy danych: p2                              
+2025-01-07 17:06:52 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:07:41 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:08:16 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:21:23 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:22:13 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:23:19 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:23:22 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:25:36 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:25:42 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:28:19 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:28:43 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:29:29 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:29:31 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:31:17 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:31:20 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:32:11 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:32:20 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:33:14 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:33:17 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:33:54 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:33:57 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:34:33 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:34:37 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:36:15 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:36:50 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:37:53 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:39:55 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:40:42 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:40:54 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:41:39 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:41:41 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:42:46 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:42:51 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:46:46 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:50:32 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:51:43 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:51:45 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 17:56:11 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 17:56:13 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 18:01:01 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 18:01:02 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 18:03:38 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu bazy danych
+2025-01-07 18:03:39 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 18:11:23 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 18:19:25 INFO  org.example.view.ConfigController - Wczytano z bazy danych: jakasplansza                    
+2025-01-07 18:19:30 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 18:19:32 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 18:26:37 INFO  org.example.view.ConfigController - Wczytano z bazy danych: jakasplansza                    
+2025-01-07 18:26:43 INFO  org.example.view.ConfigController - Wyczyszczono planszę
+2025-01-07 18:26:46 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:46 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:47 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:48 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:48 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:48 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:52 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:52 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:53 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:54 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:54 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:55 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:26:55 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:26:57 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:27:19 INFO  org.example.view.ConfigController - Zapisano w bazie danych: buźka
+2025-01-07 18:27:20 INFO  org.example.view.ConfigController - Zapisano w bazie danych: buźka
+2025-01-07 18:27:29 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 18:27:33 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 18:28:00 INFO  org.example.view.ConfigController - Wczytano z bazy danych: buźka                           
+2025-01-07 18:28:01 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:28:02 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:30 INFO  org.example.view.ConfigController - Wczytano z bazy danych: buźka                           
+2025-01-07 18:39:30 INFO  org.example.view.ConfigController - Zapisano w bazie danych: buźka                           
+2025-01-07 18:39:38 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:38 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:38 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:39 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:39 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:40 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:40 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:40 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:41 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:41 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:42 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:44 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:45 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:45 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:46 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:47 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:50 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:51 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:51 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:52 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:52 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:53 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:54 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:55 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:55 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:56 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:57 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:39:59 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:39:59 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:40:14 INFO  org.example.view.ConfigController - Zapisano w bazie danych: smutnabuźka
+2025-01-07 18:40:14 INFO  org.example.view.ConfigController - Zapisano w bazie danych: smutnabuźka
+2025-01-07 18:40:29 INFO  org.example.view.ConfigController - Wczytano z bazy danych: smutnabuźka                     
+2025-01-07 18:40:29 INFO  org.example.view.ConfigController - Zapisano w bazie danych: smutnabuźka                     
+2025-01-07 18:54:02 INFO  org.example.view.ConfigController - Sprache auf Deutsch geändert
+2025-01-07 18:54:04 INFO  org.example.view.ConfigController - Zmieniono język na polski
+2025-01-07 18:54:06 INFO  org.example.view.ConfigController - Wyświetlono autorów
+2025-01-07 18:54:08 INFO  org.example.view.ConfigController - Wyświetlono licencję
+2025-01-07 18:54:30 INFO  org.example.view.ConfigController - Wczytano z pliku C:\Users\makky\Desktop\cos.golf
+2025-01-07 18:54:37 INFO  org.example.view.ConfigController - Skonwertowano na 0/1
+2025-01-07 18:54:39 INFO  org.example.view.ConfigController - Skonwertowano na bloki
+2025-01-07 18:55:16 INFO  org.example.view.ConfigController - Zapisano w bazie danych: figura
+2025-01-07 18:55:16 INFO  org.example.view.ConfigController - Zapisano w bazie danych: figura
+2025-01-07 18:55:34 INFO  org.example.view.ConfigController - Wyczyszczono planszę
+2025-01-07 18:55:37 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:37 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:38 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:38 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:38 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:39 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:39 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:39 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:40 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:55:41 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:41 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:42 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:42 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:42 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:47 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 18:55:47 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 18:55:48 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:51 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:51 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:51 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:52 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:53 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:54 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:54 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:54 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:54 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:55 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:55 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:55 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:56 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:56 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:57 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:57 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:58 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:55:59 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:56:00 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:56:00 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:56:00 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:56:01 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:56:02 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:56:03 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:56:03 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 18:56:04 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:56:04 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 18:56:09 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 18:56:14 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 19:06:02 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 19:06:04 INFO  org.example.view.ConfigController - Wyczyszczono planszę
+2025-01-07 19:06:07 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:07 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:07 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:08 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:09 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:10 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:11 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:12 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:13 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:14 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:14 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:15 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:16 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:18 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:18 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:19 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:20 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:21 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:21 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:21 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:22 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:23 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:24 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:25 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 19:06:26 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:26 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:27 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 19:06:28 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:28 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 19:06:28 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 19:06:29 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:30 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:30 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:31 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:31 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 19:06:32 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:33 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:34 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:35 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 19:06:36 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:37 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 19:06:37 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:42 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:44 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:45 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:45 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:46 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:47 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:48 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:48 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:51 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:51 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:53 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:56 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:57 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:58 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:58 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:06:59 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:00 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:02 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:02 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:03 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:03 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:05 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:05 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:06 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:30 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 19:07:31 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:31 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:07:42 INFO  org.example.view.ConfigController - Zapisano w bazie danych: p1
+2025-01-07 19:08:15 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 19:10:57 INFO  org.example.view.ConfigController - Zapisano w bazie danych: p1                              
+2025-01-07 19:11:31 INFO  org.example.view.ConfigController - Zapisano w bazie danych: p1                              
+2025-01-07 19:11:54 INFO  org.example.view.ConfigController - Zapisano w bazie danych: figura                          
+2025-01-07 19:12:07 INFO  org.example.view.ConfigController - Zapisano w bazie danych: p1
+2025-01-07 19:12:14 INFO  org.example.view.ConfigController - Zapisano w bazie danych: p1                              
+2025-01-07 19:16:34 INFO  org.example.view.ConfigController - Zapisano w bazie danych: figura                          
+2025-01-07 19:17:26 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 19:33:11 INFO  org.example.view.ConfigController - Zapisano w bazie danych: p1                              
+2025-01-07 19:33:30 INFO  org.example.view.ConfigController - Zapisano w bazie danych: p2                              
+2025-01-07 19:33:35 INFO  org.example.view.ConfigController - Zapisano w bazie danych: p1                              
+2025-01-07 19:33:48 INFO  org.example.view.ConfigController - Zapisano w bazie danych: buźka                           
+2025-01-07 19:37:28 INFO  org.example.view.ConfigController - Wczytano z bazy danych: figura                          
+2025-01-07 19:44:16 INFO  org.example.view.ConfigController - Wczytano z bazy danych: p1                              
+2025-01-07 19:44:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:44:50 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 19:44:50 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 19:46:52 INFO  org.example.view.ConfigController - Wczytano z bazy danych: figura                          
+2025-01-07 19:55:41 INFO  org.example.view.ConfigController - Wczytano z bazy danych: figura
+2025-01-07 19:55:52 ERROR org.example.view.ConfigController - Plansza o takiej nazwie już istnieje
+2025-01-07 19:57:22 INFO  org.example.view.ConfigController - Wczytano z bazy danych: figura
+2025-01-07 19:57:27 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 19:57:34 ERROR org.example.view.ConfigController - Plansza o takiej nazwie już istnieje
+2025-01-07 19:57:39 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 19:57:47 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 20:04:59 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:05:04 INFO  org.example.view.ConfigController - Sprache auf Deutsch geändert
+2025-01-07 20:05:08 INFO  org.example.view.ConfigController - Zmieniono język na polski
+2025-01-07 20:11:26 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:11:46 INFO  org.example.view.ConfigController - Wczytano z bazy danych: jakasplansza
+2025-01-07 20:12:00 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 20:12:00 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 20:12:26 INFO  org.example.view.ConfigController - Zapisano w bazie danych: asdf________p
+2025-01-07 20:12:41 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 20:14:26 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:14:33 INFO  org.example.view.ConfigController - Wczytano z bazy danych: p1
+2025-01-07 20:14:59 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:15:06 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 20:15:52 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:16:01 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 20:16:40 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:16:50 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 20:19:58 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:20:07 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu planszy z pliku
+2025-01-07 20:20:12 INFO  org.example.view.ConfigController - Wczytano z bazy danych: p1
+2025-01-07 20:20:25 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 20:20:39 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:20:51 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 20:23:03 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:23:21 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu planszy z pliku
+2025-01-07 20:24:43 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:24:48 ERROR org.example.view.ConfigController - Błąd przy wczytywaniu planszy z pliku
+2025-01-07 20:25:13 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:25:34 INFO  org.example.view.ConfigController - Wczytano z pliku C:\Users\makky\Desktop\obrazek.golf
+2025-01-07 20:27:26 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:27:48 INFO  org.example.view.ConfigController - Wczytano z bazy danych: jakasplansza
+2025-01-07 20:33:36 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:35:45 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:35:54 INFO  org.example.view.ConfigController - Sprache auf Deutsch geändert
+2025-01-07 20:35:56 INFO  org.example.view.ConfigController - Zmieniono język na polski
+2025-01-07 20:40:12 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:41:45 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:42:07 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:43:47 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:43:54 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 20:44:16 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:44:34 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 20:44:37 INFO  org.example.view.ConfigController - Wyczyszczono planszę
+2025-01-07 20:44:39 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:39 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:39 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:40 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:40 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:41 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:44 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:45 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:45 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:46 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:47 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:47 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:49 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:51 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:51 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:52 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:54 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:44:55 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:56 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:44:57 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:44:57 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:58 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:44:58 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:44:58 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:00 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:45:01 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:01 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:45:02 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:02 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:45:02 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:05 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:05 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:45:07 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:09 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:10 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:12 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:13 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:15 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:15 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:17 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:45:18 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:46:06 INFO  org.example.view.ConfigController - Zapisano w bazie danych: plansza1
+2025-01-07 20:50:57 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:51:12 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 20:51:17 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 20:51:18 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 20:51:20 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 20:51:20 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 20:51:23 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:51:24 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:51:25 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 20:51:26 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:51:26 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:51:27 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:51:27 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:51:30 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:30 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:31 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:31 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:31 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:32 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:33 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:33 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:51:34 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:35 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:36 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:36 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:51:37 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:37 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:38 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:39 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:40 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:40 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:41 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:41 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:42 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:43 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:44 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:47 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 20:51:48 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 20:51:50 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:51 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:51 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:52 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:51:53 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 20:51:54 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 20:51:57 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 20:51:58 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 20:51:58 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 20:51:59 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 20:52:00 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:52:01 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:52:02 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:52:02 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:52:03 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:05 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:06 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:07 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:08 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:08 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:10 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 20:52:11 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 20:52:13 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:52:14 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:52:15 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:52:15 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 20:52:15 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:16 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:17 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:17 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:20 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:20 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:21 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:22 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 20:52:57 INFO  org.example.view.ConfigController - Zapisano w bazie danych: obrazek1
+2025-01-07 20:53:00 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 20:53:11 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:54:52 INFO  org.example.view.ConfigController - Wczytano z bazy danych: obrazek1
+2025-01-07 20:54:59 ERROR org.example.view.ConfigController - Plansza o takiej nazwie już istnieje
+2025-01-07 20:55:12 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 20:55:20 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 21:12:26 INFO  org.example.view.ConfigController - Uruchomiono aplikację
+2025-01-07 21:12:53 INFO  org.example.view.ConfigController - Wczytano z bazy danych: obrazek1
+2025-01-07 21:12:55 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:12:56 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:12:56 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:12:56 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:12:56 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:12:57 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:12:58 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:13:01 INFO  org.example.view.ConfigController - Wyczyszczono planszę
+2025-01-07 21:13:01 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 21:13:02 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 21:13:03 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 21:13:03 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 21:13:03 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 21:13:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 21:13:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 21:13:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 21:13:05 INFO  org.example.view.ConfigController - Zmieniono stan na true
+2025-01-07 21:13:07 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 21:13:14 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 21:13:16 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 21:13:17 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 21:13:17 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:13:18 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:13:18 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:13:18 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:13:19 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:13:19 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 21:13:26 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 21:13:28 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:13:28 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:13:28 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:13:29 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 21:13:30 INFO  org.example.view.ConfigController - Skonwertowano na 0/1
+2025-01-07 21:13:31 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 21:13:32 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 21:13:32 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację

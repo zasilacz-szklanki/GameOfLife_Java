@@ -5,7 +5,7 @@ public class GameOfLifeBoardDaoFactory {
         return new FileGameOfLifeBoardDao(fileName);
     }
 
-    public static Dao<GameOfLifeBoard> getDbDao(String boardName) {
+    public static Dao<GameOfLifeBoard> getDbDao(String boardName) throws DbException {
         return new JdbcGameOfLifeBoardDao(boardName);
     }
 }

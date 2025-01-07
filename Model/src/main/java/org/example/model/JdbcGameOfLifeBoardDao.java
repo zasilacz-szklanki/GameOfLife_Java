@@ -9,37 +9,19 @@ public class JdbcGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
     private int id = -1;
     private final String boardName;
     private String url = "jdbc:derby:GameOfLifeDB;create=true";
-    private String driverManager = "jdbc:derby:;shutdown=true";
+    private Connection conn = null;
 
     public JdbcGameOfLifeBoardDao(String boardName) {
         this.boardName = boardName;
     }
 
-    public JdbcGameOfLifeBoardDao(String boardName, String url, String driverManager) {
+    public JdbcGameOfLifeBoardDao(String boardName, String url) {
         this.boardName = boardName;
         this.url = url;
-        this.driverManager = driverManager;
     }
 
-    //do usuniecia w wersji finalnej
-    public void testDB() {
-        String querySql = "SELECT * FROM BoardName";
-
-        try (Connection conn = DriverManager.getConnection(url);
-             PreparedStatement pstmt = conn.prepareStatement(querySql)) {
-
-            ResultSet rs = pstmt.executeQuery();
-
-            System.out.println("#########");
-
-            while (rs.next()) {
-                System.out.println("id: " + rs.getInt("id") + ", name: " + rs.getString("name"));
-            }
-
-        } catch (SQLException e) {
-            System.err.println("Błąd podczas pobierania planszy: " + e.getMessage());
-            e.printStackTrace();
-        }
+    public String getBoardName() {
+        return this.boardName;
     }
 
     public List<String> getBoardNames() throws DbReadException {
@@ -47,18 +29,17 @@ public class JdbcGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
         List<String> list = new ArrayList<>();
 
         try (Connection conn = DriverManager.getConnection(url);
-             PreparedStatement pstmt = conn.prepareStatement(querySql)) {
+                PreparedStatement pstmt = conn.prepareStatement(querySql)) {
 
             ResultSet rs = pstmt.executeQuery();
 
             while (rs.next()) {
-                list.add(rs.getString("name"));
+                String str = rs.getString("name");
+                list.add(str.trim());
             }
 
         } catch (SQLException e) {
-            System.out.println("string");
-            System.out.println(e.getMessage());
-            throw new DbReadException("abc" + e.getMessage());
+            throw new DbReadException();
         }
 
         return Collections.unmodifiableList(list);
@@ -83,11 +64,9 @@ public class JdbcGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
 
             if (ids.isEmpty()) {
                 throw new DbException();
-            } else if (ids.size() == 1) {
-                this.id = ids.get(0);
-            } else {
-                this.id = ids.get(0);
             }
+
+            this.id = ids.get(0);
 
         } catch (SQLException e) {
             throw new DbReadException();
@@ -145,7 +124,6 @@ public class JdbcGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
         }
 
         String querySql = "SELECT id,x,y,value FROM GameOfLifeBoard WHERE id = ?";
-        int id;
         int x;
         int y;
         int value;
@@ -172,7 +150,7 @@ public class JdbcGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
             }
 
             if (values.isEmpty()) {
-                return null;
+                throw new DbReadException();
             }
 
             int rows = Collections.max(xs) + 1;
@@ -203,10 +181,10 @@ public class JdbcGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
             throw new DbException();
         }
 
-        String insertSql = "INSERT INTO GameOfLifeBoard (id,x,y,value) VALUES (?,?,?,?)";
+        String querySql = "INSERT INTO GameOfLifeBoard (id,x,y,value) VALUES (?,?,?,?)";
 
         try (Connection conn = DriverManager.getConnection(url);
-             PreparedStatement pstmt = conn.prepareStatement(insertSql)) {
+             PreparedStatement pstmt = conn.prepareStatement(querySql)) {
 
             for (int i = 0; i < board.getBoard().size(); i++) {
                 for (int j = 0; j < board.getBoard().get(0).size(); j++) {
@@ -222,10 +200,10 @@ public class JdbcGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
             throw new DbWriteException();
         }
 
-        insertSql = "INSERT INTO BoardName (id,name) VALUES (?,?)";
+        querySql = "INSERT INTO BoardName (id,name) VALUES (?,?)";
 
         try (Connection conn = DriverManager.getConnection(url);
-             PreparedStatement pstmt = conn.prepareStatement(insertSql)) {
+             PreparedStatement pstmt = conn.prepareStatement(querySql)) {
 
             pstmt.setInt(1, this.id);
             pstmt.setString(2, this.boardName);
@@ -237,45 +215,13 @@ public class JdbcGameOfLifeBoardDao implements Dao<GameOfLifeBoard> {
     }
 
     @Override
-    public void close() throws Exception {
-        try {
-            DriverManager.getConnection(this.driverManager);
-        } catch (SQLException e) {
-            throw new DbException();
-        }
-    }
-
-    //do usuniecia w finalnej wersji
-    public static void main(String[] args) {
-        boolean write = !true;
-        boolean[][] init = {
-                {false, false},
-                {false, true},
-                {true, false},
-        };
-
-
-        /*JdbcGameOfLifeBoardDao dao = new JdbcGameOfLifeBoardDao("PlanszaTestowa");//Kim był Testow?
-        try {
-            dao.createTables();
-        } catch (DbException e) {
-            System.err.println(e.getMessage());
-        }*/
-
-
-
-        try (JdbcGameOfLifeBoardDao dao = new JdbcGameOfLifeBoardDao("jakisboard")) {
-            if (write) {
-                //GameOfLifeBoard board = new GameOfLifeBoard(init);
-                //dao.write(board);
-                GameOfLifeBoard board = new GameOfLifeBoard(20, 25);
-                dao.write(board);
-            } else {
-                GameOfLifeBoard board = dao.read();
-                // System.out.println(dao.getBoardNames());
+    public void close() throws DbException {
+        if (this.conn != null) {
+            try {
+                this.conn.close();
+            } catch (SQLException e) {
+                throw new DbException();
             }
-        } catch (Exception e) {
-                // System.out.println(e.getMessage());
         }
     }
 }

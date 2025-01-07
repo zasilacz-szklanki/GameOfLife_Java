@@ -3,10 +3,7 @@ package org.example.view;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -95,6 +92,9 @@ public class MessageWindow {
         label.setFont(Font.font("Courier New", 16));
 
         TextField textField = new TextField();
+        textField.setTextFormatter(new TextFormatter<>(
+                change -> change.getControlNewText().matches("^[A-Za-z0-9_]*$") ? change : null
+        ));
         final String[] name = new String[1];
 
         Button okButton = new Button();
