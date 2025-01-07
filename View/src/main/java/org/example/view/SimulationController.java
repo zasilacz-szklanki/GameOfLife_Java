@@ -188,14 +188,11 @@ public class SimulationController {
         nextStepButton.setFont(Font.font("Courier New", 16));
         nextStepButton.setPrefWidth(Region.USE_COMPUTED_SIZE);
         nextStepButton.setOnAction(event -> {
-            //golb.doSimulationStep(sim);
             try {
                 golb.doSimulationStep(sim);
             } catch (DoStepException e) {
-                //assert(false);
-                ///?????????
-                //TODO co tu?
-                // error message window
+                MessageWindow.errorMessageWindow(resourceBundle.getString("error.cannotDoStep"),
+                        resourceBundle.getString("app.errorTitle"));
             }
             for (int row = 0; row < golb.getBoard().size(); row++) {
                 for (int col = 0; col < golb.getBoard().get(row).size(); col++) {
@@ -224,7 +221,8 @@ public class SimulationController {
             try {
                 golb.doSimulationStep(sim);
             } catch (DoStepException e) {
-                // throw new RuntimeException(e);
+                MessageWindow.errorMessageWindow(resourceBundle.getString("error.cannotDoStep"),
+                        resourceBundle.getString("app.errorTitle"));
             }
             for (int row = 0; row < golb.getBoard().size(); row++) {
                 for (int col = 0; col < golb.getBoard().get(row).size(); col++) {

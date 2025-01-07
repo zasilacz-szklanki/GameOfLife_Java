@@ -3150,3 +3150,58 @@ Maciej Miazek
 2025-01-07 11:46:03 INFO  org.example.view.ConfigController - Wyczyszczono planszę
 2025-01-07 11:46:04 INFO  org.example.view.ConfigController - Zmieniono stan na true
 2025-01-07 11:46:05 INFO  org.example.view.ConfigController - Zmieniono stan na false
+2025-01-07 15:33:24 ERROR org.example.view.ConfigController - Nie wybrano planszy
+2025-01-07 15:33:54 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 15:33:57 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:33:58 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:33:58 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:33:59 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 15:34:13 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 15:34:16 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:16 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:16 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:16 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:16 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:16 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:19 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:19 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:19 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:19 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:19 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:20 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:20 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:20 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:20 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:34:25 INFO  org.example.view.ConfigController - Skonwertowano na 0/1
+2025-01-07 15:34:26 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 15:34:33 INFO  org.example.view.ConfigController - Skonwertowano na bloki
+2025-01-07 15:34:34 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 15:34:42 INFO  org.example.view.ConfigController - Zapisano w bazie danych: dupa
+2025-01-07 15:34:51 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 15:35:57 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 15:42:25 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 15:42:33 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:42:34 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:42:58 INFO  org.example.view.ConfigController - Skonwertowano na 0/1
+2025-01-07 15:43:00 INFO  org.example.view.ConfigController - Skonwertowano na bloki
+2025-01-07 15:43:01 INFO  org.example.view.ConfigController - Skonwertowano na 0/1
+2025-01-07 15:43:02 INFO  org.example.view.ConfigController - Skonwertowano na bloki
+2025-01-07 15:52:26 INFO  org.example.view.ConfigController - Rozpoczęto symulację
+2025-01-07 15:52:30 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 15:52:42 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 15:52:44 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:52:44 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:52:44 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:52:44 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:52:44 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:52:45 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:52:45 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:52:45 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:52:45 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:52:45 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:52:45 INFO  org.example.view.ConfigController - Wykonano następny krok symulacji
+2025-01-07 15:52:46 INFO  org.example.view.ConfigController - Wznowiono automatyczną symulację
+2025-01-07 15:52:48 INFO  org.example.view.ConfigController - Skonwertowano na 0/1
+2025-01-07 15:52:53 INFO  org.example.view.ConfigController - Skonwertowano na bloki
+2025-01-07 15:52:58 INFO  org.example.view.ConfigController - Zatrzymano automatyczną symulację
+2025-01-07 15:57:36 INFO  org.example.view.ConfigController - Rozpoczęto symulację
