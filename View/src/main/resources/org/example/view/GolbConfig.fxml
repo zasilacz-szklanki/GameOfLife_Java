@@ -65,6 +65,11 @@
                         <Insets top="20" left="20" right="20" />
                     </VBox.margin>
                 </Button>
+                <Button fx:id="openDbButton">
+                    <VBox.margin>
+                        <Insets top="1" left="20" right="20" bottom="20" />
+                    </VBox.margin>
+                </Button>
             </children>
         </VBox>
     </center>

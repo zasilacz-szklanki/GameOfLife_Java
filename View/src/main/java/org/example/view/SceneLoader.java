@@ -12,6 +12,7 @@ public class SceneLoader {
         try {
             FXMLLoader loader = new FXMLLoader(SceneLoader.class.getResource("/org/example/view/GolbConfig.fxml"));
             stage.setScene(new Scene(loader.load()));
+
         } catch (IOException e) {
             e.printStackTrace();
         }

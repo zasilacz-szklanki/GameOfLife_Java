@@ -9,8 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import java.sql.*;
+import java.util.*;
 
 public class ConfigController {
 
@@ -25,6 +25,9 @@ public class ConfigController {
 
     @FXML
     private Button openFileButton;
+
+    @FXML
+    private Button openDbButton;
 
     @FXML
     private Label gridSizeXLabel;
@@ -163,7 +166,7 @@ public class ConfigController {
             gridSizeX = arr[0];
             gridSizeY = arr[1];
 
-            if (gridSizeX < 4 || gridSizeX > 20 || gridSizeY < 4 || gridSizeY > 20) {
+            if (gridSizeX < 4 || gridSizeX > 30 || gridSizeY < 4 || gridSizeY > 80) {
                 MessageWindow.errorMessageWindow(resourceBundle.getString("error.wrongSize"),
                         resourceBundle.getString("app.errorTitle"));
                 return;
@@ -193,16 +196,52 @@ public class ConfigController {
                         resourceBundle.getString("app.errorTitle"));
             }
         });
+
+        openDbButton.setOnAction(event -> {
+
+            List<String> boardNames = new ArrayList<>();
+            boardNames.add("p1");
+            boardNames.add("p2");
+            boardNames.add("p3");
+
+            /*
+            boardNames = loadDatabase();
+
+            try (JdbcGameOfLifeBoardDao dao = new JdbcGameOfLifeBoardDao("p1")) {
+
+                //boardNames = dao.getBoardNames();
+               System.out.println(dao.read());
+            } catch (Exception e) {
+                MessageWindow.errorMessageWindow(resourceBundle.getString("error.dbLoad"),
+                        resourceBundle.getString("app.errorTitle"));
+                System.out.println(e.getMessage());
+                return;
+            }
+            */
+
+            String boardName = MessageWindow.boardNameChooseWindow(boardNames,
+                    resourceBundle.getString("button.openDb"),
+                    resourceBundle.getString("app.dbTitle"));
+
+            if (boardName == null) {
+                MessageWindow.errorMessageWindow(resourceBundle.getString("error.boardNotLoaded"),
+                        resourceBundle.getString("app.errorTitle"));
+            } else {
+                MessageWindow.messageWindow(boardName, resourceBundle.getString("app.messageTitle"));
+                logger.info(resourceBundle.getString("action.loadedFromDb") + ": " + boardName);
+            }
+        });
     }
 
     private void updateUI() {
-        gridSizeXLabel.setText(resourceBundle.getString("label.gridSizeX") + " (4-20):");
+        gridSizeXLabel.setText(resourceBundle.getString("label.gridSizeX") + " (4-30):");
         gridSizeXField.setPromptText(resourceBundle.getString("label.enterSize"));
-        gridSizeYLabel.setText(resourceBundle.getString("label.gridSizeY") + " (4-20):");
+        gridSizeYLabel.setText(resourceBundle.getString("label.gridSizeY") + " (4-80):");
         gridSizeYField.setPromptText(resourceBundle.getString("label.enterSize"));
         densityLabel.setText(resourceBundle.getString("label.density") + " (%):");
         startButton.setText(resourceBundle.getString("button.start"));
         openFileButton.setText(resourceBundle.getString("button.openFile"));
+        openDbButton.setText(resourceBundle.getString("button.openDb"));
 
         infoMenu.setText(resourceBundle.getString("menu.info"));
         langMenu.setText(resourceBundle.getString("menu.language"));
@@ -212,4 +251,36 @@ public class ConfigController {
         deItem.setText(resourceBundle.getString("menu.item.lang.german"));
     }
 
+    //    public static void main(String[] args) {
+    //        boolean write = !true;
+    //        boolean[][] init = {
+    //                {false, false},
+    //                {false, true},
+    //                {true, false},
+    //        };
+    //
+    //
+    //        /*JdbcGameOfLifeBoardDao dao = new JdbcGameOfLifeBoardDao("PlanszaTestowa");//Kim był Testow?
+    //        try {
+    //            dao.createTables();
+    //        } catch (DbException e) {
+    //            System.err.println(e.getMessage());
+    //        }*/
+    //
+    //
+    //
+    //        try (JdbcGameOfLifeBoardDao dao = new JdbcGameOfLifeBoardDao("jakasplansza")) {
+    //            if (write) {
+    //                //GameOfLifeBoard board = new GameOfLifeBoard(init);
+    //                //dao.write(board);
+    //                GameOfLifeBoard board = new GameOfLifeBoard(5, 8);
+    //                dao.write(board);
+    //            } else {
+    //                GameOfLifeBoard board = dao.read();
+    //                System.out.println(dao.getBoardNames());
+    //            }
+    //        } catch (Exception e) {
+    //            // System.out.println(e.getMessage());
+    //        }
+    //    }
 }

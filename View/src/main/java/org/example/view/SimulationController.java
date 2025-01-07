@@ -1,16 +1,16 @@
 package org.example.view;
 
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Region;
+import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.example.model.*;
+import org.kordamp.ikonli.javafx.FontIcon;
+import org.kordamp.ikonli.material.Material;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -95,6 +95,8 @@ public class SimulationController {
         final MenuBar menuBar = new MenuBar();
         final Menu convertMenu = new Menu(resourceBundle.getString("menu.convert"));
         final Menu fileMenu = new Menu(resourceBundle.getString("menu.file"));
+        final Menu dbMenu = new Menu(resourceBundle.getString("menu.database"));
+        final Menu boardMenu = new Menu(resourceBundle.getString("menu.board"));
 
         MenuItem convertToBlocksItem = new MenuItem(resourceBundle.getString("menu.item.convertToBlocks"));
         MenuItem convertToNumbersItem = new MenuItem(resourceBundle.getString("menu.item.convertToNumbers"));
@@ -137,10 +139,47 @@ public class SimulationController {
             }
         });
 
+        MenuItem saveInDbItem = new MenuItem(resourceBundle.getString("menu.item.saveInDb"));
+        saveInDbItem.setOnAction(event -> {
+
+            String boardName = MessageWindow.boardSaver(resourceBundle.getString("menu.item.saveInDb"),
+                    resourceBundle.getString("app.dbTitle"));
+
+            if (boardName == null) {
+                MessageWindow.errorMessageWindow(resourceBundle.getString("error.dbWrite"),
+                        resourceBundle.getString("app.errorTitle"));
+            } else {
+                MessageWindow.messageWindow(boardName, resourceBundle.getString("app.messageTitle"));
+                logger.info(resourceBundle.getString("action.savedInDb") + ": " + boardName);
+            }
+        });
+
+        MenuItem cleanItem = new MenuItem(resourceBundle.getString("menu.item.clean"));
+        cleanItem.setOnAction(event -> {
+            for (int row = 0; row < golb.getBoard().size(); row++) {
+                for (int col = 0; col < golb.getBoard().get(row).size(); col++) {
+                    golb.set(row, col, false);
+                    if (isColorMode[0]) {
+                        label[row][col].setText(converter.toBlock(false));
+                        label[row][col].setStyle("-fx-text-fill: " + converter.toColor(false) + ";");
+                    } else {
+                        label[row][col].setText(converter.toString(false));
+                        label[row][col].setStyle("-fx-text-fill: " + converter.toColor(false) + ";");
+                    }
+                }
+            }
+
+            logger.info(resourceBundle.getString("action.boardCleaned"));
+        });
+
         convertMenu.getItems().addAll(convertToBlocksItem, convertToNumbersItem);
         menuBar.getMenus().addAll(convertMenu);
         fileMenu.getItems().addAll(saveToFileItem);
         menuBar.getMenus().addAll(fileMenu);
+        dbMenu.getItems().addAll(saveInDbItem);
+        menuBar.getMenus().addAll(dbMenu);
+        boardMenu.getItems().addAll(cleanItem);
+        menuBar.getMenus().addAll(boardMenu);
 
         Button nextStepButton = new Button(resourceBundle.getString("button.nextStep"));
         nextStepButton.setFont(Font.font("Courier New", 16));
@@ -153,6 +192,7 @@ public class SimulationController {
                 //assert(false);
                 ///?????????
                 //TODO co tu?
+                // error message window
             }
             for (int row = 0; row < golb.getBoard().size(); row++) {
                 for (int col = 0; col < golb.getBoard().get(row).size(); col++) {
@@ -169,9 +209,25 @@ public class SimulationController {
             logger.info(resourceBundle.getString("action.nextStep"));
         });
 
+        Button playButton = new Button();
+        FontIcon playIcon = new FontIcon(Material.PLAY_ARROW);
+        playButton.setGraphic(playIcon);
 
-        HBox bottomBox = new HBox(nextStepButton);
+        Button stopButton = new Button();
+        FontIcon stopIcon = new FontIcon(Material.PAUSE);
+        stopButton.setGraphic(stopIcon);
+
+        HBox boxPlayStop = new HBox(10);
+        boxPlayStop.getChildren().addAll(playButton, stopButton);
+        boxPlayStop.setAlignment(Pos.CENTER);
+
+        VBox buttonBox = new VBox(10);
+        buttonBox.getChildren().addAll(nextStepButton, boxPlayStop);
+        buttonBox.setAlignment(Pos.CENTER);
+
+        HBox bottomBox = new HBox(buttonBox);
         bottomBox.setAlignment(Pos.CENTER);
+        bottomBox.setPadding(new Insets(20));
 
         BorderPane layout = new BorderPane();
         layout.setTop(menuBar);
@@ -185,5 +241,21 @@ public class SimulationController {
         Scene newScene = new Scene(layout, windowWidth, windowHeight);
         newWindow.setScene(newScene);
         newWindow.show();
+
+        //        HBox bottomBox = new HBox(nextStepButton);
+        //        bottomBox.setAlignment(Pos.CENTER);
+        //
+        //        BorderPane layout = new BorderPane();
+        //        layout.setTop(menuBar);
+        //        layout.setCenter(gridPane);
+        //        layout.setBottom(bottomBox);
+        //        layout.setStyle("-fx-background-color: #000057;");
+        //
+        //        int padding = 30;
+        //        double windowWidth = gridSizeY * 12 + padding;
+        //        double windowHeight = gridSizeX * 20 + padding + 100;
+        //        Scene newScene = new Scene(layout, windowWidth, windowHeight);
+        //        newWindow.setScene(newScene);
+        //        newWindow.show();
     }
 }
