@@ -1,13 +1,13 @@
-#GameOfLife 
+# GameOfLife 
 
-##Wstęp
+## Wstęp
 Ten wspaniały projekt powstał w celu zaliczenia przedmiotu *Programowanie Komponetowe*
 **Vanitas vanitatum et omnia vanitas**
 
-##Kompilacja
+## Kompilacja
 `mvn compile`
 
-##Uruchomienie
+## Uruchomienie
 \`\`\`
 cd View
 mvn javafx:run
