@@ -8,7 +8,6 @@ Ten wspaniały projekt powstał w celu zaliczenia przedmiotu *Programowanie Komp
 `mvn compile`
 
 ## Uruchomienie
-\`\`\`
-cd View
-mvn javafx:run
-\`\`\`
+`cd View`
+`mvn javafx:run`
+
